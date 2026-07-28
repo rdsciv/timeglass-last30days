@@ -301,7 +301,7 @@
   /* Final CTA */
   .final {
     text-align: center;
-    padding: 20px 0 64px;
+    padding: 20px 0 28px;
   }
   .final h2 {
     margin: 0 0 10px;
@@ -316,6 +316,66 @@
     color: var(--muted);
   }
   .final .cta { justify-content: center; }
+
+  /* Closer offer — after the scroll, convert */
+  .offer {
+    background: var(--forest);
+    color: #f7f4ee;
+    border-radius: 24px;
+    padding: 40px 28px 36px;
+    text-align: center;
+    margin: 12px 0 48px;
+    box-shadow: var(--shadow);
+  }
+  .offer .eyebrow {
+    margin: 0 0 12px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(247, 244, 238, 0.58);
+  }
+  .offer h2 {
+    margin: 0 0 12px;
+    font-family: var(--font-display);
+    font-style: normal;
+    font-weight: 600;
+    font-size: clamp(1.85rem, 3.8vw, 2.55rem);
+    letter-spacing: -0.03em;
+    line-height: 1.12;
+    max-width: 16ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .offer p {
+    margin: 0 auto 24px;
+    max-width: 34ch;
+    color: rgba(247, 244, 238, 0.72);
+    font-size: 1.05rem;
+    line-height: 1.5;
+  }
+  .offer .btn-offer {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    padding: 0 22px;
+    border-radius: 999px;
+    background: #f7f4ee;
+    color: var(--forest);
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    letter-spacing: -0.01em;
+  }
+  .offer .btn-offer:hover {
+    background: #ffffff;
+  }
+  .offer .fine {
+    margin: 14px 0 0;
+    font-size: 0.86rem;
+    color: rgba(247, 244, 238, 0.55);
+  }
 
   footer.site {
     border-top: 1px solid var(--line);
@@ -428,14 +488,23 @@ open out/work-wrapped.html</pre>
       <h2>Your timesheet already knows.</h2>
       <p>Now your agent can wrap it — and Timeglass can capture the next month.</p>
       <div class="cta">
-        <a class="btn btn-primary" href="https://timeglass.ai">Get started on Timeglass</a>
         <a class="btn btn-secondary" href="https://github.com/rdsciv/timeglass-last30days">Star the repo</a>
       </div>
+    </section>
+
+    <section class="offer" aria-labelledby="offer-title">
+      <p class="eyebrow">Timeglass</p>
+      <h2 id="offer-title">Free forever for the first person at your company.</h2>
+      <p>Click here to sign up. No credit card required.</p>
+      <a class="btn-offer" href="https://app.timeglass.ai/sign-up">Click here to sign up</a>
+      <p class="fine">First seat free forever · cancel anytime · no card to start</p>
     </section>
 
     <footer class="site">
       <div>MIT · Built to show what AI-era timesheets unlock</div>
       <div>
+        <a href="https://app.timeglass.ai/sign-up">Sign up</a>
+        ·
         <a href="https://timeglass.ai">timeglass.ai</a>
         ·
         <a href="https://github.com/rdsciv/timeglass-last30days">GitHub</a>

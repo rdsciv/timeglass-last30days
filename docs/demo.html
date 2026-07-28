@@ -322,6 +322,63 @@ body {
   color: var(--rose);
 }
 
+/* Closer offer — last thing after the scroll */
+.offer {
+  margin-top: 18px;
+  background: var(--forest);
+  color: #f7f4ee;
+  border-radius: 20px;
+  padding: 32px 24px 28px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+.offer .eyebrow {
+  margin: 0 0 10px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(247, 244, 238, 0.55);
+}
+.offer h2 {
+  margin: 0 auto 10px;
+  font-family: var(--font-display);
+  font-style: normal;
+  font-weight: 600;
+  font-size: clamp(1.55rem, 3.4vw, 2.05rem);
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  max-width: 16ch;
+  color: #f7f4ee;
+}
+.offer p {
+  margin: 0 auto 20px;
+  max-width: 32ch;
+  color: rgba(247, 244, 238, 0.72);
+  font-size: 0.98rem;
+  line-height: 1.45;
+}
+.offer .btn-offer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 20px;
+  border-radius: 999px;
+  background: #f7f4ee;
+  color: var(--forest);
+  font-weight: 700;
+  font-size: 0.98rem;
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+.offer .btn-offer:hover { background: #ffffff; }
+.offer .fine {
+  margin: 12px 0 0;
+  font-size: 0.8rem;
+  color: rgba(247, 244, 238, 0.52);
+}
+
 .footer {
   margin-top: 22px;
   padding-top: 16px;
@@ -393,6 +450,14 @@ body {
         <div class="chips" id="chips"></div>
       </section>
     </div>
+
+    <section class="offer" aria-labelledby="offer-title">
+      <p class="eyebrow">Timeglass</p>
+      <h2 id="offer-title">Free forever for the first person at your company.</h2>
+      <p>Click here to sign up. No credit card required.</p>
+      <a class="btn-offer" href="https://app.timeglass.ai/sign-up" target="_blank" rel="noreferrer">Click here to sign up</a>
+      <p class="fine">First seat free forever · no card to start</p>
+    </section>
 
     <footer class="footer">
       <div>Built with <a href="https://timeglass.ai" target="_blank" rel="noreferrer">Timeglass</a> · no scraping · your work record only</div>

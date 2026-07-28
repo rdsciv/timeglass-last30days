@@ -255,8 +255,8 @@ Python 3.10+ · stdlib only (no pip install required for the engine).
 ---
 
 <p align="center">
-  <strong>Your timesheet already knows.</strong><br />
-  Now your agent can wrap it.<br /><br />
+  <strong>Free forever for the first person at your company.</strong><br />
+  <a href="https://app.timeglass.ai/sign-up"><strong>Click here to sign up</strong></a> — no credit card required.<br /><br />
   <a href="https://timeglass.ai">timeglass.ai</a> ·
   <a href="https://github.com/rdsciv/timeglass-last30days">github.com/rdsciv/timeglass-last30days</a>
 </p>
