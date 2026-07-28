@@ -1,13 +1,16 @@
 # /timeglass-last30days
 
 <p align="center">
-  <img src="media/hero.svg" alt="timeglass-last30days — Work Wrapped from Timeglass MCP" width="920" />
+  <a href="https://rdsciv.github.io/timeglass-last30days/demo.html">
+    <img src="media/pr-assets/work-wrapped-demo.png" alt="Work Wrapped demo — 157h across 25 days from Timeglass MCP" width="920" />
+  </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/rdsciv/timeglass-last30days/stargazers"><img src="https://img.shields.io/github/stars/rdsciv/timeglass-last30days?style=for-the-badge&logo=github&color=7C5CFF" alt="stars" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-3dd68c?style=for-the-badge" alt="MIT" /></a>
   <a href="https://timeglass.ai"><img src="https://img.shields.io/badge/powered%20by-Timeglass%20MCP-3de0c5?style=for-the-badge" alt="Timeglass MCP" /></a>
+  <a href="https://rdsciv.github.io/timeglass-last30days/demo.html"><img src="https://img.shields.io/badge/live-demo-7C5CFF?style=for-the-badge" alt="live demo" /></a>
   <a href="https://agentskills.io"><img src="https://img.shields.io/badge/Agent%20Skills-ready-7C5CFF?style=for-the-badge" alt="Agent Skills" /></a>
 </p>
 
@@ -19,17 +22,19 @@
 No timers to reconstruct. No CSV exports. No scraping Reddit.  
 Your agent pulls the last 30 days from Timeglass and hands you a **Work Wrapped**.
 
+**[Live demo →](https://rdsciv.github.io/timeglass-last30days/demo.html)** · **[Landing page](https://rdsciv.github.io/timeglass-last30days/)** · **[timeglass.ai](https://timeglass.ai)**
+
 ```text
 ⏳ timeglass-last30days v1.0.0 · 2026-06-29 → 2026-07-28
 
-Your last 30 days: 157.2h tracked, led by Acme Corp · website redesign, 12% meetings.
+Your last 30 days: 157.2h tracked, led by Acme Corp · website redesign, 7% meetings.
 
-Total   157h   active days 22
-Billable  84.0%   meetings 12.0%   deep 138h
+Total    157h   active days 25
+Billable  82.6%   meetings 6.7%   deep 147h
 
 Top projects:
-  █████████░░░░░░░░░░░░░░░   38.2%   60.0h  Acme Corp · website redesign
-  ██████░░░░░░░░░░░░░░░░░░   27.1%   42.6h  Beta Studio · brand refresh
+  █████████░░░░░░░░░░░░░░░   37.3%   58.6h  Acme Corp · website redesign
+  ███████░░░░░░░░░░░░░░░░░   28.3%   44.5h  Beta Studio · brand refresh
   …
 ```
 

@@ -11,10 +11,13 @@ Goal: turn this repo into top-of-funnel for [timeglass.ai](https://timeglass.ai)
 - [x] Public repo with polished README + hero
 - [x] Zero-config `--demo` path (anyone can run in 30s)
 - [x] HTML artifact people can screenshot
-- [x] GitHub Pages landing + live demo
+- [x] GitHub Pages landing + live demo (HTTP 200)
 - [x] Agent Skills / Claude / Codex / Grok manifests
-- [ ] Pin tweet + LinkedIn post with demo GIF/MP4 of HTML scroll
-- [ ] Show HN / r/ClaudeAI / r/ChatGPTCoding / r/mcp
+- [x] PR screenshots in `media/pr-assets/`
+- [x] Ready-to-post copy in `SOCIAL.md`
+- [x] GitHub Release v1.0.0
+- [ ] Pin tweet + LinkedIn post (copy in SOCIAL.md — needs human account)
+- [ ] Show HN / r/ClaudeAI / r/ChatGPTCoding / r/mcp (copy ready)
 - [ ] Tag Timeglass team for RT / blog embed
 - [ ] Submit to agentskills.io / ClawHub / awesome-mcp lists
 
