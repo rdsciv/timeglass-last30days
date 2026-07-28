@@ -1,0 +1,20 @@
+{
+  "name": "timeglass-last30days",
+  "interface": {
+    "displayName": "timeglass-last30days"
+  },
+  "plugins": [
+    {
+      "name": "timeglass-last30days",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/rdsciv/timeglass-last30days.git"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

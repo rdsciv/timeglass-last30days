@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Demo artifacts
+        run: |
+          python skills/timeglass-last30days/scripts/last30work.py --demo --emit all --out ./out
+          test -f out/work-wrapped.html
+          test -f out/work-wrapped.md
+          test -f out/work-wrapped.json

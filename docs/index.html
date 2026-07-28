@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>timeglass-last30days — Work Wrapped</title>
+  <meta name="description" content="Spotify Wrapped for your work. Last 30 days from Timeglass MCP. No scraping." />
+  <meta property="og:title" content="timeglass-last30days — Work Wrapped" />
+  <meta property="og:description" content="Your timesheet already knows. Now your agent can wrap it." />
+  <meta property="og:image" content="hero.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #07080c; --text: #f4f1ea; --muted: #9aa3b5; --accent: #7c5cff; --accent2: #3de0c5;
+      --card: #141826; --line: rgba(255,255,255,.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: "DM Sans", system-ui, sans-serif; color: var(--text);
+      background:
+        radial-gradient(1000px 500px at 15% -10%, rgba(124,92,255,.28), transparent 55%),
+        radial-gradient(800px 420px at 90% 0%, rgba(61,224,197,.16), transparent 50%),
+        var(--bg);
+      min-height: 100vh;
+    }
+    .wrap { max-width: 920px; margin: 0 auto; padding: 48px 20px 80px; }
+    .nav { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 40px; }
+    .logo { display: flex; gap: 12px; align-items: center; font-weight: 700; letter-spacing: -0.03em; }
+    .mark {
+      width: 40px; height: 40px; border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      display: grid; place-items: center; font-size: .85rem;
+    }
+    .links a {
+      color: var(--muted); text-decoration: none; margin-left: 16px; font-size: .95rem;
+    }
+    .links a:hover { color: var(--text); }
+    h1 {
+      font-size: clamp(2.4rem, 6vw, 4rem); line-height: 1.05; letter-spacing: -0.045em;
+      margin: 0 0 16px; max-width: 12ch;
+    }
+    .lead { font-size: 1.2rem; color: var(--muted); max-width: 38ch; margin: 0 0 28px; }
+    .cta { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 36px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 18px; border-radius: 999px; font-weight: 600; text-decoration: none;
+      border: 1px solid var(--line);
+    }
+    .btn.primary { background: linear-gradient(135deg, var(--accent), #5b8cff); color: white; border: none; }
+    .btn.ghost { color: var(--text); background: rgba(255,255,255,.03); }
+    .hero {
+      width: 100%; border-radius: 24px; border: 1px solid var(--line);
+      box-shadow: 0 24px 80px rgba(0,0,0,.45); margin: 12px 0 40px;
+    }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 40px; }
+    @media (max-width: 720px) { .grid { grid-template-columns: 1fr; } }
+    .card {
+      background: linear-gradient(180deg, var(--card), #1a1f30);
+      border: 1px solid var(--line); border-radius: 20px; padding: 18px;
+    }
+    .card h3 { margin: 0 0 8px; font-size: 1rem; }
+    .card p { margin: 0; color: var(--muted); font-size: .92rem; line-height: 1.45; }
+    pre {
+      background: #0e1018; border: 1px solid var(--line); border-radius: 16px;
+      padding: 18px; overflow: auto; font-family: "IBM Plex Mono", monospace; font-size: .85rem;
+      color: #d7dde8; line-height: 1.55;
+    }
+    .foot { margin-top: 48px; color: var(--muted); font-size: .9rem; }
+    a { color: var(--accent2); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <div class="logo"><div class="mark">TG</div>timeglass-last30days</div>
+      <div class="links">
+        <a href="https://github.com/rdsciv/timeglass-last30days">GitHub</a>
+        <a href="demo.html">Live demo</a>
+        <a href="https://timeglass.ai">Timeglass</a>
+      </div>
+    </div>
+
+    <h1>Work Wrapped for your real month</h1>
+    <p class="lead">
+      The viral energy of <code>/last30days</code>, pointed at <strong>your</strong> work —
+      via Timeglass MCP. No scraping. No CSV archaeology.
+    </p>
+    <div class="cta">
+      <a class="btn primary" href="demo.html">Open demo Wrapped →</a>
+      <a class="btn ghost" href="https://github.com/rdsciv/timeglass-last30days#install">Install the skill</a>
+    </div>
+
+    <img class="hero" src="hero.svg" alt="Work Wrapped hero" />
+
+    <div class="grid">
+      <div class="card">
+        <h3>MCP-native</h3>
+        <p>Pulls projects, meetings, activities, and budgets from the official Timeglass MCP. Wrong-audience desktop tokens are diagnosed, not looped forever.</p>
+      </div>
+      <div class="card">
+        <h3>Agent skill</h3>
+        <p>Ships with SKILL.md + Claude/Codex/Grok plugin manifests. One install path across Agent Skills hosts.</p>
+      </div>
+      <div class="card">
+        <h3>Shareable HTML</h3>
+        <p>Self-contained Work Wrapped page you can open locally or host. Stdlib Python engine — zero pip install.</p>
+      </div>
+    </div>
+
+    <h2 style="letter-spacing:-0.03em;">30-second demo</h2>
+    <pre>git clone https://github.com/rdsciv/timeglass-last30days.git
+cd timeglass-last30days
+python3 skills/timeglass-last30days/scripts/last30work.py --demo --emit all --out ./out
+open out/work-wrapped.html</pre>
+
+    <p class="foot">
+      MIT · Built to help <a href="https://timeglass.ai">timeglass.ai</a> show what AI-era timesheets unlock ·
+      <a href="https://github.com/rdsciv/timeglass-last30days">Star the repo</a>
+    </p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+{
+  "name": "timeglass-last30days",
+  "version": "1.0.0",
+  "description": "Work Wrapped: review your last 30 days from Timeglass MCP.",
+  "author": {
+    "name": "rdsciv",
+    "url": "https://github.com/rdsciv"
+  },
+  "homepage": "https://github.com/rdsciv/timeglass-last30days",
+  "repository": "https://github.com/rdsciv/timeglass-last30days",
+  "license": "MIT",
+  "keywords": [
+    "timeglass",
+    "timesheet",
+    "productivity",
+    "mcp",
+    "work-wrapped",
+    "monthly-review"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "timeglass-last30days",
+    "shortDescription": "Work Wrapped from your Timeglass last 30 days.",
+    "longDescription": "timeglass-last30days adds a skill that pulls your last 30 days of work from Timeglass MCP and synthesizes a Spotify-Wrapped-style monthly review — projects, clients, meetings, billable mix, and budget risk. No scraping.",
+    "developerName": "rdsciv",
+    "category": "Productivity",
+    "capabilities": ["Interactive", "Read", "Write"],
+    "websiteURL": "https://github.com/rdsciv/timeglass-last30days",
+    "defaultPrompt": [
+      "Work Wrapped for my last 30 days",
+      "Which clients ate my month?",
+      "Budget risk from Timeglass this month"
+    ],
+    "brandColor": "#7C5CFF"
+  }
+}

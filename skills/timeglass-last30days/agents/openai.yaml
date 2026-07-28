@@ -1,0 +1,8 @@
+interface:
+  display_name: "Timeglass Last 30 Days"
+  short_description: "Work Wrapped from your Timeglass last 30 days via MCP. Projects, meetings, billable mix, budget risk. No scraping."
+  default_prompt: "Build my Work Wrapped for the last 30 days from Timeglass MCP. Show projects, clients, meetings, billable mix, identity cards, and what I should do next week."
+  brand_color: "#7C5CFF"
+
+policy:
+  allow_implicit_invocation: true

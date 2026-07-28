@@ -1,0 +1,4 @@
+# Ignore heavy/local paths inside skill bundles if packaging tools honor this
+__pycache__/
+*.pyc
+.DS_Store

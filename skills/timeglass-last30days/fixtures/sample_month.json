@@ -1,0 +1,2608 @@
+{
+  "meta": {
+    "window_start": "2026-06-29",
+    "window_end": "2026-07-28",
+    "timezone": "America/Chicago",
+    "user": "Alex Rivera",
+    "workspace": "Rivera Studio",
+    "source": "fixture",
+    "generated_for": "demo"
+  },
+  "projects": [
+    {
+      "project_id": "p-acme",
+      "name": "Acme Corp \u00b7 website redesign",
+      "client": "Acme Corp",
+      "budget_hours": 120,
+      "billable": true,
+      "minutes": 3514,
+      "hours": 58.6,
+      "budget_used_pct": 48.8
+    },
+    {
+      "project_id": "p-beta",
+      "name": "Beta Studio \u00b7 brand refresh",
+      "client": "Beta Studio",
+      "budget_hours": 80,
+      "billable": true,
+      "minutes": 2668,
+      "hours": 44.5,
+      "budget_used_pct": 55.6
+    },
+    {
+      "project_id": "p-nova",
+      "name": "Nova Health \u00b7 discovery",
+      "client": "Nova Health",
+      "budget_hours": 40,
+      "billable": true,
+      "minutes": 1603,
+      "hours": 26.7,
+      "budget_used_pct": 66.8
+    },
+    {
+      "project_id": "p-internal",
+      "name": "Internal \u00b7 ops & tooling",
+      "client": "Internal",
+      "budget_hours": null,
+      "billable": false,
+      "minutes": 1644,
+      "hours": 27.4,
+      "budget_used_pct": null
+    }
+  ],
+  "project_daily_summary": [
+    {
+      "date": "2026-06-29",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "client": "Acme Corp",
+      "minutes": 140,
+      "billable": true
+    },
+    {
+      "date": "2026-06-29",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "client": "Beta Studio",
+      "minutes": 154,
+      "billable": true
+    },
+    {
+      "date": "2026-06-29",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "client": "Nova Health",
+      "minutes": 65,
+      "billable": true
+    },
+    {
+      "date": "2026-06-29",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "client": "Internal",
+      "minutes": 124,
+      "billable": false
+    },
+    {
+      "date": "2026-06-30",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "client": "Acme Corp",
+      "minutes": 140,
+      "billable": true
+    },
+    {
+      "date": "2026-06-30",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "client": "Beta Studio",
+      "minutes": 71,
+      "billable": true
+    },
+    {
+      "date": "2026-06-30",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "client": "Nova Health",
+      "minutes": 43,
+      "billable": true
+    },
+    {
+      "date": "2026-06-30",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "client": "Internal",
+      "minutes": 67,
+      "billable": false
+    },
+    {
+      "date": "2026-07-01",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "client": "Acme Corp",
+      "minutes": 144,
+      "billable": true
+    },
+    {
+      "date": "2026-07-01",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "client": "Beta Studio",
+      "minutes": 168,
+      "billable": true
+    },
+    {
+      "date": "2026-07-01",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "client": "Nova Health",
+      "minutes": 81,
+      "billable": true
+    },
+    {
+      "date": "2026-07-01",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "client": "Internal",
+      "minutes": 74,
+      "billable": false
+    },
+    {
+      "date": "2026-07-02",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "client": "Acme Corp",
+      "minutes": 136,
+      "billable": true
+    },
+    {
+      "date": "2026-07-02",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "client": "Beta Studio",
+      "minutes": 97,
+      "billable": true
+    },
+    {
+      "date": "2026-07-02",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "client": "Nova Health",
+      "minutes": 55,
+      "billable": true
+    },
+    {
+      "date": "2026-07-02",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "client": "Internal",
+      "minutes": 129,
+      "billable": false
+    },
+    {
+      "date": "2026-07-03",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "client": "Acme Corp",
+      "minutes": 148,
+      "billable": true
+    },
+    {
+      "date": "2026-07-03",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "client": "Beta Studio",
+      "minutes": 117,
+      "billable": true
+    },
+    {
+      "date": "2026-07-03",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "client": "Nova Health",
+      "minutes": 100,
+      "billable": true
+    },
+    {
+      "date": "2026-07-03",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "client": "Internal",
+      "minutes": 92,
+      "billable": false
+    },
+    {
+      "date": "2026-07-05",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "client": "Acme Corp",
+      "minutes": 8,
+      "billable": true
+    },
+    {
+      "date": "2026-07-05",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "client": "Beta Studio",
+      "minutes": 9,
+      "billable": true
+    },
+    {
+      "date": "2026-07-05",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "client": "Nova Health",
+      "minutes": 5,
+      "billable": true
+    },
+    {
+      "date": "2026-07-05",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "client": "Internal",
+      "minutes": 5,
+      "billable": false
+    },
+    {
+      "date": "2026-07-06",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "client": "Acme Corp",
+      "minutes": 155,
+      "billable": true
+    },
+    {
+      "date": "2026-07-06",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "client": "Beta Studio",
+      "minutes": 143,
+      "billable": true
+    },
+    {
+      "date": "2026-07-06",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "client": "Nova Health",
+      "minutes": 68,
+      "billable": true
+    },
+    {
+      "date": "2026-07-06",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "client": "Internal",
+      "minutes": 149,
+      "billable": false
+    },
+    {
+      "date": "2026-07-07",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "client": "Acme Corp",
+      "minutes": 118,
+      "billable": true
+    },
+    {
+      "date": "2026-07-07",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "client": "Beta Studio",
+      "minutes": 114,
+      "billable": true
+    },
+    {
+      "date": "2026-07-07",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "client": "Nova Health",
+      "minutes": 50,
+      "billable": true
+    },
+    {
+      "date": "2026-07-07",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "client": "Internal",
+      "minutes": 80,
+      "billable": false
+    },
+    {
+      "date": "2026-07-08",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "client": "Acme Corp",
+      "minutes": 151,
+      "billable": true
+    },
+    {
+      "date": "2026-07-08",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "client": "Beta Studio",
+      "minutes": 76,
+      "billable": true
+    },
+    {
+      "date": "2026-07-08",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "client": "Nova Health",
+      "minutes": 69,
+      "billable": true
+    },
+    {
+      "date": "2026-07-08",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "client": "Internal",
+      "minutes": 32,
+      "billable": false
+    },
+    {
+      "date": "2026-07-09",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "client": "Acme Corp",
+      "minutes": 182,
+      "billable": true
+    },
+    {
+      "date": "2026-07-09",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "client": "Beta Studio",
+      "minutes": 92,
+      "billable": true
+    },
+    {
+      "date": "2026-07-09",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "client": "Nova Health",
+      "minutes": 93,
+      "billable": true
+    },
+    {
+      "date": "2026-07-09",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "client": "Internal",
+      "minutes": 56,
+      "billable": false
+    },
+    {
+      "date": "2026-07-10",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "client": "Acme Corp",
+      "minutes": 235,
+      "billable": true
+    },
+    {
+      "date": "2026-07-10",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "client": "Beta Studio",
+      "minutes": 177,
+      "billable": true
+    },
+    {
+      "date": "2026-07-10",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "client": "Nova Health",
+      "minutes": 79,
+      "billable": true
+    },
+    {
+      "date": "2026-07-10",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "client": "Internal",
+      "minutes": 21,
+      "billable": false
+    },
+    {
+      "date": "2026-07-11",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "client": "Acme Corp",
+      "minutes": 5,
+      "billable": true
+    },
+    {
+      "date": "2026-07-11",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "client": "Beta Studio",
+      "minutes": 5,
+      "billable": true
+    },
+    {
+      "date": "2026-07-11",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "client": "Nova Health",
+      "minutes": 4,
+      "billable": true
+    },
+    {
+      "date": "2026-07-11",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "client": "Internal",
+      "minutes": 6,
+      "billable": false
+    },
+    {
+      "date": "2026-07-13",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "client": "Acme Corp",
+      "minutes": 152,
+      "billable": true
+    },
+    {
+      "date": "2026-07-13",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "client": "Beta Studio",
+      "minutes": 135,
+      "billable": true
+    },
+    {
+      "date": "2026-07-13",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "client": "Nova Health",
+      "minutes": 64,
+      "billable": true
+    },
+    {
+      "date": "2026-07-13",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "client": "Internal",
+      "minutes": 32,
+      "billable": false
+    },
+    {
+      "date": "2026-07-14",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "client": "Acme Corp",
+      "minutes": 143,
+      "billable": true
+    },
+    {
+      "date": "2026-07-14",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "client": "Beta Studio",
+      "minutes": 157,
+      "billable": true
+    },
+    {
+      "date": "2026-07-14",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "client": "Nova Health",
+      "minutes": 98,
+      "billable": true
+    },
+    {
+      "date": "2026-07-14",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "client": "Internal",
+      "minutes": 59,
+      "billable": false
+    },
+    {
+      "date": "2026-07-15",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "client": "Acme Corp",
+      "minutes": 115,
+      "billable": true
+    },
+    {
+      "date": "2026-07-15",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "client": "Beta Studio",
+      "minutes": 105,
+      "billable": true
+    },
+    {
+      "date": "2026-07-15",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "client": "Nova Health",
+      "minutes": 54,
+      "billable": true
+    },
+    {
+      "date": "2026-07-15",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "client": "Internal",
+      "minutes": 80,
+      "billable": false
+    },
+    {
+      "date": "2026-07-16",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "client": "Acme Corp",
+      "minutes": 186,
+      "billable": true
+    },
+    {
+      "date": "2026-07-16",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "client": "Beta Studio",
+      "minutes": 171,
+      "billable": true
+    },
+    {
+      "date": "2026-07-16",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "client": "Nova Health",
+      "minutes": 81,
+      "billable": true
+    },
+    {
+      "date": "2026-07-16",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "client": "Internal",
+      "minutes": 71,
+      "billable": false
+    },
+    {
+      "date": "2026-07-17",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "client": "Acme Corp",
+      "minutes": 175,
+      "billable": true
+    },
+    {
+      "date": "2026-07-17",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "client": "Beta Studio",
+      "minutes": 121,
+      "billable": true
+    },
+    {
+      "date": "2026-07-17",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "client": "Nova Health",
+      "minutes": 54,
+      "billable": true
+    },
+    {
+      "date": "2026-07-17",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "client": "Internal",
+      "minutes": 30,
+      "billable": false
+    },
+    {
+      "date": "2026-07-18",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "client": "Acme Corp",
+      "minutes": 10,
+      "billable": true
+    },
+    {
+      "date": "2026-07-18",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "client": "Beta Studio",
+      "minutes": 5,
+      "billable": true
+    },
+    {
+      "date": "2026-07-18",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "client": "Nova Health",
+      "minutes": 4,
+      "billable": true
+    },
+    {
+      "date": "2026-07-18",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "client": "Internal",
+      "minutes": 10,
+      "billable": false
+    },
+    {
+      "date": "2026-07-20",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "client": "Acme Corp",
+      "minutes": 118,
+      "billable": true
+    },
+    {
+      "date": "2026-07-20",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "client": "Beta Studio",
+      "minutes": 98,
+      "billable": true
+    },
+    {
+      "date": "2026-07-20",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "client": "Nova Health",
+      "minutes": 86,
+      "billable": true
+    },
+    {
+      "date": "2026-07-20",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "client": "Internal",
+      "minutes": 84,
+      "billable": false
+    },
+    {
+      "date": "2026-07-21",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "client": "Acme Corp",
+      "minutes": 224,
+      "billable": true
+    },
+    {
+      "date": "2026-07-21",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "client": "Beta Studio",
+      "minutes": 141,
+      "billable": true
+    },
+    {
+      "date": "2026-07-21",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "client": "Nova Health",
+      "minutes": 94,
+      "billable": true
+    },
+    {
+      "date": "2026-07-21",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "client": "Internal",
+      "minutes": 30,
+      "billable": false
+    },
+    {
+      "date": "2026-07-22",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "client": "Acme Corp",
+      "minutes": 160,
+      "billable": true
+    },
+    {
+      "date": "2026-07-22",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "client": "Beta Studio",
+      "minutes": 106,
+      "billable": true
+    },
+    {
+      "date": "2026-07-22",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "client": "Nova Health",
+      "minutes": 65,
+      "billable": true
+    },
+    {
+      "date": "2026-07-22",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "client": "Internal",
+      "minutes": 108,
+      "billable": false
+    },
+    {
+      "date": "2026-07-23",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "client": "Acme Corp",
+      "minutes": 159,
+      "billable": true
+    },
+    {
+      "date": "2026-07-23",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "client": "Beta Studio",
+      "minutes": 103,
+      "billable": true
+    },
+    {
+      "date": "2026-07-23",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "client": "Nova Health",
+      "minutes": 78,
+      "billable": true
+    },
+    {
+      "date": "2026-07-23",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "client": "Internal",
+      "minutes": 106,
+      "billable": false
+    },
+    {
+      "date": "2026-07-24",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "client": "Acme Corp",
+      "minutes": 181,
+      "billable": true
+    },
+    {
+      "date": "2026-07-24",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "client": "Beta Studio",
+      "minutes": 112,
+      "billable": true
+    },
+    {
+      "date": "2026-07-24",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "client": "Nova Health",
+      "minutes": 74,
+      "billable": true
+    },
+    {
+      "date": "2026-07-24",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "client": "Internal",
+      "minutes": 77,
+      "billable": false
+    },
+    {
+      "date": "2026-07-27",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "client": "Acme Corp",
+      "minutes": 165,
+      "billable": true
+    },
+    {
+      "date": "2026-07-27",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "client": "Beta Studio",
+      "minutes": 103,
+      "billable": true
+    },
+    {
+      "date": "2026-07-27",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "client": "Nova Health",
+      "minutes": 84,
+      "billable": true
+    },
+    {
+      "date": "2026-07-27",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "client": "Internal",
+      "minutes": 75,
+      "billable": false
+    },
+    {
+      "date": "2026-07-28",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "client": "Acme Corp",
+      "minutes": 164,
+      "billable": true
+    },
+    {
+      "date": "2026-07-28",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "client": "Beta Studio",
+      "minutes": 88,
+      "billable": true
+    },
+    {
+      "date": "2026-07-28",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "client": "Nova Health",
+      "minutes": 55,
+      "billable": true
+    },
+    {
+      "date": "2026-07-28",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "client": "Internal",
+      "minutes": 47,
+      "billable": false
+    }
+  ],
+  "user_daily_summary": [
+    {
+      "date": "2026-06-29",
+      "minutes": 483,
+      "billable_minutes": 359,
+      "meeting_minutes": 0
+    },
+    {
+      "date": "2026-06-30",
+      "minutes": 321,
+      "billable_minutes": 254,
+      "meeting_minutes": 45
+    },
+    {
+      "date": "2026-07-01",
+      "minutes": 467,
+      "billable_minutes": 393,
+      "meeting_minutes": 30
+    },
+    {
+      "date": "2026-07-02",
+      "minutes": 417,
+      "billable_minutes": 288,
+      "meeting_minutes": 30
+    },
+    {
+      "date": "2026-07-03",
+      "minutes": 457,
+      "billable_minutes": 365,
+      "meeting_minutes": 60
+    },
+    {
+      "date": "2026-07-04",
+      "minutes": 0,
+      "billable_minutes": 0,
+      "meeting_minutes": 0
+    },
+    {
+      "date": "2026-07-05",
+      "minutes": 27,
+      "billable_minutes": 22,
+      "meeting_minutes": 0
+    },
+    {
+      "date": "2026-07-06",
+      "minutes": 515,
+      "billable_minutes": 366,
+      "meeting_minutes": 0
+    },
+    {
+      "date": "2026-07-07",
+      "minutes": 362,
+      "billable_minutes": 282,
+      "meeting_minutes": 25
+    },
+    {
+      "date": "2026-07-08",
+      "minutes": 328,
+      "billable_minutes": 296,
+      "meeting_minutes": 25
+    },
+    {
+      "date": "2026-07-09",
+      "minutes": 423,
+      "billable_minutes": 367,
+      "meeting_minutes": 0
+    },
+    {
+      "date": "2026-07-10",
+      "minutes": 512,
+      "billable_minutes": 491,
+      "meeting_minutes": 25
+    },
+    {
+      "date": "2026-07-11",
+      "minutes": 20,
+      "billable_minutes": 14,
+      "meeting_minutes": 0
+    },
+    {
+      "date": "2026-07-12",
+      "minutes": 0,
+      "billable_minutes": 0,
+      "meeting_minutes": 0
+    },
+    {
+      "date": "2026-07-13",
+      "minutes": 383,
+      "billable_minutes": 351,
+      "meeting_minutes": 60
+    },
+    {
+      "date": "2026-07-14",
+      "minutes": 457,
+      "billable_minutes": 398,
+      "meeting_minutes": 0
+    },
+    {
+      "date": "2026-07-15",
+      "minutes": 354,
+      "billable_minutes": 274,
+      "meeting_minutes": 30
+    },
+    {
+      "date": "2026-07-16",
+      "minutes": 509,
+      "billable_minutes": 438,
+      "meeting_minutes": 0
+    },
+    {
+      "date": "2026-07-17",
+      "minutes": 380,
+      "billable_minutes": 350,
+      "meeting_minutes": 0
+    },
+    {
+      "date": "2026-07-18",
+      "minutes": 29,
+      "billable_minutes": 19,
+      "meeting_minutes": 0
+    },
+    {
+      "date": "2026-07-19",
+      "minutes": 0,
+      "billable_minutes": 0,
+      "meeting_minutes": 0
+    },
+    {
+      "date": "2026-07-20",
+      "minutes": 386,
+      "billable_minutes": 302,
+      "meeting_minutes": 45
+    },
+    {
+      "date": "2026-07-21",
+      "minutes": 489,
+      "billable_minutes": 459,
+      "meeting_minutes": 60
+    },
+    {
+      "date": "2026-07-22",
+      "minutes": 439,
+      "billable_minutes": 331,
+      "meeting_minutes": 60
+    },
+    {
+      "date": "2026-07-23",
+      "minutes": 446,
+      "billable_minutes": 340,
+      "meeting_minutes": 30
+    },
+    {
+      "date": "2026-07-24",
+      "minutes": 444,
+      "billable_minutes": 367,
+      "meeting_minutes": 50
+    },
+    {
+      "date": "2026-07-25",
+      "minutes": 0,
+      "billable_minutes": 0,
+      "meeting_minutes": 0
+    },
+    {
+      "date": "2026-07-26",
+      "minutes": 0,
+      "billable_minutes": 0,
+      "meeting_minutes": 0
+    },
+    {
+      "date": "2026-07-27",
+      "minutes": 427,
+      "billable_minutes": 352,
+      "meeting_minutes": 0
+    },
+    {
+      "date": "2026-07-28",
+      "minutes": 354,
+      "billable_minutes": 307,
+      "meeting_minutes": 60
+    }
+  ],
+  "activities": [
+    {
+      "date": "2026-06-29",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Client email + estimate update",
+      "minutes": 70,
+      "app": "Slack"
+    },
+    {
+      "date": "2026-06-29",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Homepage component build",
+      "minutes": 70,
+      "app": "Google Chrome"
+    },
+    {
+      "date": "2026-06-29",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Brand system tokens",
+      "minutes": 77,
+      "app": "Linear"
+    },
+    {
+      "date": "2026-06-29",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Brand system tokens",
+      "minutes": 77,
+      "app": "Figma"
+    },
+    {
+      "date": "2026-06-29",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Stakeholder interviews notes",
+      "minutes": 32,
+      "app": "Figma"
+    },
+    {
+      "date": "2026-06-29",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Discovery readout draft",
+      "minutes": 33,
+      "app": "Slack"
+    },
+    {
+      "date": "2026-06-29",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "title": "Hiring pipeline review",
+      "minutes": 62,
+      "app": "Slack"
+    },
+    {
+      "date": "2026-06-29",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "title": "Hiring pipeline review",
+      "minutes": 62,
+      "app": "Zoom"
+    },
+    {
+      "date": "2026-06-30",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Homepage component build",
+      "minutes": 70,
+      "app": "Linear"
+    },
+    {
+      "date": "2026-06-30",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Client email + estimate update",
+      "minutes": 70,
+      "app": "Zoom"
+    },
+    {
+      "date": "2026-06-30",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Presentation deck for kickoff",
+      "minutes": 35,
+      "app": "VS Code"
+    },
+    {
+      "date": "2026-06-30",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Brand system tokens",
+      "minutes": 36,
+      "app": "Linear"
+    },
+    {
+      "date": "2026-06-30",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Journey map workshop prep",
+      "minutes": 43,
+      "app": "Zoom"
+    },
+    {
+      "date": "2026-06-30",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "title": "Weekly ops standup notes",
+      "minutes": 33,
+      "app": "Gmail"
+    },
+    {
+      "date": "2026-06-30",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "title": "Weekly ops standup notes",
+      "minutes": 34,
+      "app": "Linear"
+    },
+    {
+      "date": "2026-07-01",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Budget revision after scope call",
+      "minutes": 72,
+      "app": "Figma"
+    },
+    {
+      "date": "2026-07-01",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Homepage component build",
+      "minutes": 72,
+      "app": "Zoom"
+    },
+    {
+      "date": "2026-07-01",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Logo exploration round 2",
+      "minutes": 84,
+      "app": "VS Code"
+    },
+    {
+      "date": "2026-07-01",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Color accessibility check",
+      "minutes": 84,
+      "app": "Zoom"
+    },
+    {
+      "date": "2026-07-01",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Journey map workshop prep",
+      "minutes": 40,
+      "app": "Google Chrome"
+    },
+    {
+      "date": "2026-07-01",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Journey map workshop prep",
+      "minutes": 41,
+      "app": "Notion"
+    },
+    {
+      "date": "2026-07-01",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "title": "Tooling / MCP skill work",
+      "minutes": 37,
+      "app": "Zoom"
+    },
+    {
+      "date": "2026-07-01",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "title": "Weekly ops standup notes",
+      "minutes": 37,
+      "app": "Google Chrome"
+    },
+    {
+      "date": "2026-07-02",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "QA pass on staging",
+      "minutes": 68,
+      "app": "Slack"
+    },
+    {
+      "date": "2026-07-02",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Client email + estimate update",
+      "minutes": 68,
+      "app": "Figma"
+    },
+    {
+      "date": "2026-07-02",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Brand system tokens",
+      "minutes": 48,
+      "app": "Notion"
+    },
+    {
+      "date": "2026-07-02",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Color accessibility check",
+      "minutes": 49,
+      "app": "Zoom"
+    },
+    {
+      "date": "2026-07-02",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Discovery readout draft",
+      "minutes": 55,
+      "app": "Notion"
+    },
+    {
+      "date": "2026-07-02",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "title": "Tooling / MCP skill work",
+      "minutes": 64,
+      "app": "Gmail"
+    },
+    {
+      "date": "2026-07-02",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "title": "Hiring pipeline review",
+      "minutes": 65,
+      "app": "Gmail"
+    },
+    {
+      "date": "2026-07-03",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "QA pass on staging",
+      "minutes": 74,
+      "app": "Linear"
+    },
+    {
+      "date": "2026-07-03",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "QA pass on staging",
+      "minutes": 74,
+      "app": "Linear"
+    },
+    {
+      "date": "2026-07-03",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Logo exploration round 2",
+      "minutes": 58,
+      "app": "Gmail"
+    },
+    {
+      "date": "2026-07-03",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Brand system tokens",
+      "minutes": 59,
+      "app": "Figma"
+    },
+    {
+      "date": "2026-07-03",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Stakeholder interviews notes",
+      "minutes": 50,
+      "app": "Google Chrome"
+    },
+    {
+      "date": "2026-07-03",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Discovery readout draft",
+      "minutes": 50,
+      "app": "Linear"
+    },
+    {
+      "date": "2026-07-03",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "title": "Weekly ops standup notes",
+      "minutes": 46,
+      "app": "Linear"
+    },
+    {
+      "date": "2026-07-03",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "title": "Hiring pipeline review",
+      "minutes": 46,
+      "app": "Gmail"
+    },
+    {
+      "date": "2026-07-05",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Budget revision after scope call",
+      "minutes": 8,
+      "app": "Zoom"
+    },
+    {
+      "date": "2026-07-05",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Logo exploration round 2",
+      "minutes": 9,
+      "app": "VS Code"
+    },
+    {
+      "date": "2026-07-05",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Journey map workshop prep",
+      "minutes": 5,
+      "app": "Slack"
+    },
+    {
+      "date": "2026-07-05",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "title": "Tooling / MCP skill work",
+      "minutes": 5,
+      "app": "Notion"
+    },
+    {
+      "date": "2026-07-06",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "QA pass on staging",
+      "minutes": 77,
+      "app": "Figma"
+    },
+    {
+      "date": "2026-07-06",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "QA pass on staging",
+      "minutes": 78,
+      "app": "Notion"
+    },
+    {
+      "date": "2026-07-06",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Brand system tokens",
+      "minutes": 71,
+      "app": "Notion"
+    },
+    {
+      "date": "2026-07-06",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Presentation deck for kickoff",
+      "minutes": 72,
+      "app": "Slack"
+    },
+    {
+      "date": "2026-07-06",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Discovery readout draft",
+      "minutes": 34,
+      "app": "VS Code"
+    },
+    {
+      "date": "2026-07-06",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Stakeholder interviews notes",
+      "minutes": 34,
+      "app": "Gmail"
+    },
+    {
+      "date": "2026-07-06",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "title": "Weekly ops standup notes",
+      "minutes": 74,
+      "app": "Google Chrome"
+    },
+    {
+      "date": "2026-07-06",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "title": "Tooling / MCP skill work",
+      "minutes": 75,
+      "app": "Gmail"
+    },
+    {
+      "date": "2026-07-07",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "QA pass on staging",
+      "minutes": 59,
+      "app": "Linear"
+    },
+    {
+      "date": "2026-07-07",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Homepage component build",
+      "minutes": 59,
+      "app": "Slack"
+    },
+    {
+      "date": "2026-07-07",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Color accessibility check",
+      "minutes": 57,
+      "app": "Notion"
+    },
+    {
+      "date": "2026-07-07",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Color accessibility check",
+      "minutes": 57,
+      "app": "Gmail"
+    },
+    {
+      "date": "2026-07-07",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Stakeholder interviews notes",
+      "minutes": 50,
+      "app": "VS Code"
+    },
+    {
+      "date": "2026-07-07",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "title": "Invoice prep + admin",
+      "minutes": 40,
+      "app": "Figma"
+    },
+    {
+      "date": "2026-07-07",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "title": "Tooling / MCP skill work",
+      "minutes": 40,
+      "app": "Slack"
+    },
+    {
+      "date": "2026-07-08",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Budget revision after scope call",
+      "minutes": 75,
+      "app": "Slack"
+    },
+    {
+      "date": "2026-07-08",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Client email + estimate update",
+      "minutes": 76,
+      "app": "Gmail"
+    },
+    {
+      "date": "2026-07-08",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Logo exploration round 2",
+      "minutes": 38,
+      "app": "Gmail"
+    },
+    {
+      "date": "2026-07-08",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Logo exploration round 2",
+      "minutes": 38,
+      "app": "Gmail"
+    },
+    {
+      "date": "2026-07-08",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Stakeholder interviews notes",
+      "minutes": 34,
+      "app": "VS Code"
+    },
+    {
+      "date": "2026-07-08",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Stakeholder interviews notes",
+      "minutes": 35,
+      "app": "Linear"
+    },
+    {
+      "date": "2026-07-08",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "title": "Invoice prep + admin",
+      "minutes": 32,
+      "app": "Linear"
+    },
+    {
+      "date": "2026-07-09",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Budget revision after scope call",
+      "minutes": 60,
+      "app": "Slack"
+    },
+    {
+      "date": "2026-07-09",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Homepage component build",
+      "minutes": 61,
+      "app": "Slack"
+    },
+    {
+      "date": "2026-07-09",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "QA pass on staging",
+      "minutes": 61,
+      "app": "Gmail"
+    },
+    {
+      "date": "2026-07-09",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Logo exploration round 2",
+      "minutes": 46,
+      "app": "Zoom"
+    },
+    {
+      "date": "2026-07-09",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Color accessibility check",
+      "minutes": 46,
+      "app": "Slack"
+    },
+    {
+      "date": "2026-07-09",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Stakeholder interviews notes",
+      "minutes": 46,
+      "app": "Gmail"
+    },
+    {
+      "date": "2026-07-09",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Discovery readout draft",
+      "minutes": 47,
+      "app": "VS Code"
+    },
+    {
+      "date": "2026-07-09",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "title": "Weekly ops standup notes",
+      "minutes": 56,
+      "app": "Figma"
+    },
+    {
+      "date": "2026-07-10",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Homepage component build",
+      "minutes": 78,
+      "app": "Linear"
+    },
+    {
+      "date": "2026-07-10",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Figma handoff polish",
+      "minutes": 78,
+      "app": "Gmail"
+    },
+    {
+      "date": "2026-07-10",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Homepage component build",
+      "minutes": 79,
+      "app": "Linear"
+    },
+    {
+      "date": "2026-07-10",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Logo exploration round 2",
+      "minutes": 88,
+      "app": "Linear"
+    },
+    {
+      "date": "2026-07-10",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Brand system tokens",
+      "minutes": 89,
+      "app": "Linear"
+    },
+    {
+      "date": "2026-07-10",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Journey map workshop prep",
+      "minutes": 39,
+      "app": "Zoom"
+    },
+    {
+      "date": "2026-07-10",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Journey map workshop prep",
+      "minutes": 40,
+      "app": "Gmail"
+    },
+    {
+      "date": "2026-07-10",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "title": "Tooling / MCP skill work",
+      "minutes": 21,
+      "app": "Slack"
+    },
+    {
+      "date": "2026-07-11",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "QA pass on staging",
+      "minutes": 5,
+      "app": "Gmail"
+    },
+    {
+      "date": "2026-07-11",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Logo exploration round 2",
+      "minutes": 5,
+      "app": "Figma"
+    },
+    {
+      "date": "2026-07-11",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Stakeholder interviews notes",
+      "minutes": 4,
+      "app": "Google Chrome"
+    },
+    {
+      "date": "2026-07-11",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "title": "Weekly ops standup notes",
+      "minutes": 6,
+      "app": "VS Code"
+    },
+    {
+      "date": "2026-07-13",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Budget revision after scope call",
+      "minutes": 76,
+      "app": "VS Code"
+    },
+    {
+      "date": "2026-07-13",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Figma handoff polish",
+      "minutes": 76,
+      "app": "Notion"
+    },
+    {
+      "date": "2026-07-13",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Logo exploration round 2",
+      "minutes": 67,
+      "app": "Notion"
+    },
+    {
+      "date": "2026-07-13",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Logo exploration round 2",
+      "minutes": 68,
+      "app": "Zoom"
+    },
+    {
+      "date": "2026-07-13",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Discovery readout draft",
+      "minutes": 32,
+      "app": "Zoom"
+    },
+    {
+      "date": "2026-07-13",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Journey map workshop prep",
+      "minutes": 32,
+      "app": "Notion"
+    },
+    {
+      "date": "2026-07-13",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "title": "Weekly ops standup notes",
+      "minutes": 32,
+      "app": "Figma"
+    },
+    {
+      "date": "2026-07-14",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Client email + estimate update",
+      "minutes": 71,
+      "app": "Google Chrome"
+    },
+    {
+      "date": "2026-07-14",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Client email + estimate update",
+      "minutes": 72,
+      "app": "VS Code"
+    },
+    {
+      "date": "2026-07-14",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Presentation deck for kickoff",
+      "minutes": 78,
+      "app": "Zoom"
+    },
+    {
+      "date": "2026-07-14",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Logo exploration round 2",
+      "minutes": 79,
+      "app": "Gmail"
+    },
+    {
+      "date": "2026-07-14",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Discovery readout draft",
+      "minutes": 49,
+      "app": "Zoom"
+    },
+    {
+      "date": "2026-07-14",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Discovery readout draft",
+      "minutes": 49,
+      "app": "Figma"
+    },
+    {
+      "date": "2026-07-14",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "title": "Invoice prep + admin",
+      "minutes": 59,
+      "app": "VS Code"
+    },
+    {
+      "date": "2026-07-15",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Budget revision after scope call",
+      "minutes": 57,
+      "app": "Google Chrome"
+    },
+    {
+      "date": "2026-07-15",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Client email + estimate update",
+      "minutes": 58,
+      "app": "Zoom"
+    },
+    {
+      "date": "2026-07-15",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Presentation deck for kickoff",
+      "minutes": 52,
+      "app": "Slack"
+    },
+    {
+      "date": "2026-07-15",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Presentation deck for kickoff",
+      "minutes": 53,
+      "app": "Gmail"
+    },
+    {
+      "date": "2026-07-15",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Stakeholder interviews notes",
+      "minutes": 54,
+      "app": "VS Code"
+    },
+    {
+      "date": "2026-07-15",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "title": "Hiring pipeline review",
+      "minutes": 40,
+      "app": "Zoom"
+    },
+    {
+      "date": "2026-07-15",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "title": "Weekly ops standup notes",
+      "minutes": 40,
+      "app": "Figma"
+    },
+    {
+      "date": "2026-07-16",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Figma handoff polish",
+      "minutes": 62,
+      "app": "Figma"
+    },
+    {
+      "date": "2026-07-16",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Budget revision after scope call",
+      "minutes": 62,
+      "app": "VS Code"
+    },
+    {
+      "date": "2026-07-16",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Homepage component build",
+      "minutes": 62,
+      "app": "Figma"
+    },
+    {
+      "date": "2026-07-16",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Logo exploration round 2",
+      "minutes": 85,
+      "app": "Linear"
+    },
+    {
+      "date": "2026-07-16",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Logo exploration round 2",
+      "minutes": 86,
+      "app": "Figma"
+    },
+    {
+      "date": "2026-07-16",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Stakeholder interviews notes",
+      "minutes": 40,
+      "app": "Notion"
+    },
+    {
+      "date": "2026-07-16",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Stakeholder interviews notes",
+      "minutes": 41,
+      "app": "Slack"
+    },
+    {
+      "date": "2026-07-16",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "title": "Weekly ops standup notes",
+      "minutes": 35,
+      "app": "Notion"
+    },
+    {
+      "date": "2026-07-16",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "title": "Hiring pipeline review",
+      "minutes": 36,
+      "app": "Google Chrome"
+    },
+    {
+      "date": "2026-07-17",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Homepage component build",
+      "minutes": 87,
+      "app": "Linear"
+    },
+    {
+      "date": "2026-07-17",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Budget revision after scope call",
+      "minutes": 88,
+      "app": "Google Chrome"
+    },
+    {
+      "date": "2026-07-17",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Presentation deck for kickoff",
+      "minutes": 60,
+      "app": "Linear"
+    },
+    {
+      "date": "2026-07-17",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Logo exploration round 2",
+      "minutes": 61,
+      "app": "Zoom"
+    },
+    {
+      "date": "2026-07-17",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Discovery readout draft",
+      "minutes": 54,
+      "app": "VS Code"
+    },
+    {
+      "date": "2026-07-17",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "title": "Hiring pipeline review",
+      "minutes": 30,
+      "app": "Figma"
+    },
+    {
+      "date": "2026-07-18",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Homepage component build",
+      "minutes": 10,
+      "app": "Slack"
+    },
+    {
+      "date": "2026-07-18",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Logo exploration round 2",
+      "minutes": 5,
+      "app": "Linear"
+    },
+    {
+      "date": "2026-07-18",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Stakeholder interviews notes",
+      "minutes": 4,
+      "app": "Zoom"
+    },
+    {
+      "date": "2026-07-18",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "title": "Invoice prep + admin",
+      "minutes": 10,
+      "app": "Linear"
+    },
+    {
+      "date": "2026-07-20",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Client email + estimate update",
+      "minutes": 59,
+      "app": "Figma"
+    },
+    {
+      "date": "2026-07-20",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Budget revision after scope call",
+      "minutes": 59,
+      "app": "Linear"
+    },
+    {
+      "date": "2026-07-20",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Presentation deck for kickoff",
+      "minutes": 49,
+      "app": "Linear"
+    },
+    {
+      "date": "2026-07-20",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Brand system tokens",
+      "minutes": 49,
+      "app": "Linear"
+    },
+    {
+      "date": "2026-07-20",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Stakeholder interviews notes",
+      "minutes": 43,
+      "app": "Zoom"
+    },
+    {
+      "date": "2026-07-20",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Stakeholder interviews notes",
+      "minutes": 43,
+      "app": "Linear"
+    },
+    {
+      "date": "2026-07-20",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "title": "Weekly ops standup notes",
+      "minutes": 42,
+      "app": "Slack"
+    },
+    {
+      "date": "2026-07-20",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "title": "Invoice prep + admin",
+      "minutes": 42,
+      "app": "Linear"
+    },
+    {
+      "date": "2026-07-21",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Client email + estimate update",
+      "minutes": 74,
+      "app": "Zoom"
+    },
+    {
+      "date": "2026-07-21",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Figma handoff polish",
+      "minutes": 75,
+      "app": "Notion"
+    },
+    {
+      "date": "2026-07-21",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Figma handoff polish",
+      "minutes": 75,
+      "app": "Zoom"
+    },
+    {
+      "date": "2026-07-21",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Logo exploration round 2",
+      "minutes": 70,
+      "app": "Linear"
+    },
+    {
+      "date": "2026-07-21",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Color accessibility check",
+      "minutes": 71,
+      "app": "Google Chrome"
+    },
+    {
+      "date": "2026-07-21",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Journey map workshop prep",
+      "minutes": 47,
+      "app": "Linear"
+    },
+    {
+      "date": "2026-07-21",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Discovery readout draft",
+      "minutes": 47,
+      "app": "Figma"
+    },
+    {
+      "date": "2026-07-21",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "title": "Invoice prep + admin",
+      "minutes": 30,
+      "app": "Zoom"
+    },
+    {
+      "date": "2026-07-22",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Homepage component build",
+      "minutes": 80,
+      "app": "Gmail"
+    },
+    {
+      "date": "2026-07-22",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Homepage component build",
+      "minutes": 80,
+      "app": "VS Code"
+    },
+    {
+      "date": "2026-07-22",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Presentation deck for kickoff",
+      "minutes": 53,
+      "app": "VS Code"
+    },
+    {
+      "date": "2026-07-22",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Logo exploration round 2",
+      "minutes": 53,
+      "app": "Zoom"
+    },
+    {
+      "date": "2026-07-22",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Stakeholder interviews notes",
+      "minutes": 32,
+      "app": "Google Chrome"
+    },
+    {
+      "date": "2026-07-22",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Stakeholder interviews notes",
+      "minutes": 33,
+      "app": "Figma"
+    },
+    {
+      "date": "2026-07-22",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "title": "Tooling / MCP skill work",
+      "minutes": 54,
+      "app": "Gmail"
+    },
+    {
+      "date": "2026-07-22",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "title": "Weekly ops standup notes",
+      "minutes": 54,
+      "app": "Gmail"
+    },
+    {
+      "date": "2026-07-23",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Homepage component build",
+      "minutes": 79,
+      "app": "Figma"
+    },
+    {
+      "date": "2026-07-23",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Budget revision after scope call",
+      "minutes": 80,
+      "app": "Linear"
+    },
+    {
+      "date": "2026-07-23",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Color accessibility check",
+      "minutes": 51,
+      "app": "Figma"
+    },
+    {
+      "date": "2026-07-23",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Logo exploration round 2",
+      "minutes": 52,
+      "app": "VS Code"
+    },
+    {
+      "date": "2026-07-23",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Journey map workshop prep",
+      "minutes": 39,
+      "app": "Notion"
+    },
+    {
+      "date": "2026-07-23",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Journey map workshop prep",
+      "minutes": 39,
+      "app": "Linear"
+    },
+    {
+      "date": "2026-07-23",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "title": "Hiring pipeline review",
+      "minutes": 53,
+      "app": "Google Chrome"
+    },
+    {
+      "date": "2026-07-23",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "title": "Hiring pipeline review",
+      "minutes": 53,
+      "app": "Gmail"
+    },
+    {
+      "date": "2026-07-24",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Client email + estimate update",
+      "minutes": 60,
+      "app": "Gmail"
+    },
+    {
+      "date": "2026-07-24",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Budget revision after scope call",
+      "minutes": 60,
+      "app": "Zoom"
+    },
+    {
+      "date": "2026-07-24",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Homepage component build",
+      "minutes": 61,
+      "app": "Zoom"
+    },
+    {
+      "date": "2026-07-24",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Brand system tokens",
+      "minutes": 56,
+      "app": "Google Chrome"
+    },
+    {
+      "date": "2026-07-24",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Logo exploration round 2",
+      "minutes": 56,
+      "app": "Slack"
+    },
+    {
+      "date": "2026-07-24",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Stakeholder interviews notes",
+      "minutes": 37,
+      "app": "Slack"
+    },
+    {
+      "date": "2026-07-24",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Stakeholder interviews notes",
+      "minutes": 37,
+      "app": "Linear"
+    },
+    {
+      "date": "2026-07-24",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "title": "Hiring pipeline review",
+      "minutes": 38,
+      "app": "Notion"
+    },
+    {
+      "date": "2026-07-24",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "title": "Hiring pipeline review",
+      "minutes": 39,
+      "app": "Linear"
+    },
+    {
+      "date": "2026-07-27",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "QA pass on staging",
+      "minutes": 82,
+      "app": "Slack"
+    },
+    {
+      "date": "2026-07-27",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Figma handoff polish",
+      "minutes": 83,
+      "app": "Slack"
+    },
+    {
+      "date": "2026-07-27",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Color accessibility check",
+      "minutes": 51,
+      "app": "Figma"
+    },
+    {
+      "date": "2026-07-27",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Color accessibility check",
+      "minutes": 52,
+      "app": "Notion"
+    },
+    {
+      "date": "2026-07-27",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Journey map workshop prep",
+      "minutes": 42,
+      "app": "Google Chrome"
+    },
+    {
+      "date": "2026-07-27",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Journey map workshop prep",
+      "minutes": 42,
+      "app": "Google Chrome"
+    },
+    {
+      "date": "2026-07-27",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "title": "Weekly ops standup notes",
+      "minutes": 37,
+      "app": "Linear"
+    },
+    {
+      "date": "2026-07-27",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "title": "Weekly ops standup notes",
+      "minutes": 38,
+      "app": "VS Code"
+    },
+    {
+      "date": "2026-07-28",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Homepage component build",
+      "minutes": 82,
+      "app": "Figma"
+    },
+    {
+      "date": "2026-07-28",
+      "project_id": "p-acme",
+      "project_name": "Acme Corp \u00b7 website redesign",
+      "title": "Client email + estimate update",
+      "minutes": 82,
+      "app": "Linear"
+    },
+    {
+      "date": "2026-07-28",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Color accessibility check",
+      "minutes": 44,
+      "app": "Notion"
+    },
+    {
+      "date": "2026-07-28",
+      "project_id": "p-beta",
+      "project_name": "Beta Studio \u00b7 brand refresh",
+      "title": "Presentation deck for kickoff",
+      "minutes": 44,
+      "app": "Linear"
+    },
+    {
+      "date": "2026-07-28",
+      "project_id": "p-nova",
+      "project_name": "Nova Health \u00b7 discovery",
+      "title": "Journey map workshop prep",
+      "minutes": 55,
+      "app": "Zoom"
+    },
+    {
+      "date": "2026-07-28",
+      "project_id": "p-internal",
+      "project_name": "Internal \u00b7 ops & tooling",
+      "title": "Weekly ops standup notes",
+      "minutes": 47,
+      "app": "Gmail"
+    }
+  ],
+  "meetings": [
+    {
+      "date": "2026-06-30",
+      "title": "Weekly leadership",
+      "project_id": "p-internal",
+      "client": "Internal",
+      "minutes": 45,
+      "attendees": 4
+    },
+    {
+      "date": "2026-07-01",
+      "title": "Beta brand review",
+      "project_id": "p-beta",
+      "client": "Beta Studio",
+      "minutes": 30,
+      "attendees": 5
+    },
+    {
+      "date": "2026-07-02",
+      "title": "Beta brand review",
+      "project_id": "p-beta",
+      "client": "Beta Studio",
+      "minutes": 30,
+      "attendees": 6
+    },
+    {
+      "date": "2026-07-03",
+      "title": "Acme scope sync",
+      "project_id": "p-acme",
+      "client": "Acme Corp",
+      "minutes": 60,
+      "attendees": 2
+    },
+    {
+      "date": "2026-07-07",
+      "title": "Beta brand review",
+      "project_id": "p-beta",
+      "client": "Beta Studio",
+      "minutes": 25,
+      "attendees": 2
+    },
+    {
+      "date": "2026-07-08",
+      "title": "Acme scope sync",
+      "project_id": "p-acme",
+      "client": "Acme Corp",
+      "minutes": 25,
+      "attendees": 2
+    },
+    {
+      "date": "2026-07-10",
+      "title": "Weekly leadership",
+      "project_id": "p-internal",
+      "client": "Internal",
+      "minutes": 25,
+      "attendees": 6
+    },
+    {
+      "date": "2026-07-13",
+      "title": "Acme scope sync",
+      "project_id": "p-acme",
+      "client": "Acme Corp",
+      "minutes": 60,
+      "attendees": 2
+    },
+    {
+      "date": "2026-07-15",
+      "title": "Nova discovery workshop",
+      "project_id": "p-nova",
+      "client": "Nova Health",
+      "minutes": 30,
+      "attendees": 3
+    },
+    {
+      "date": "2026-07-20",
+      "title": "Weekly leadership",
+      "project_id": "p-internal",
+      "client": "Internal",
+      "minutes": 45,
+      "attendees": 4
+    },
+    {
+      "date": "2026-07-21",
+      "title": "Weekly leadership",
+      "project_id": "p-internal",
+      "client": "Internal",
+      "minutes": 60,
+      "attendees": 4
+    },
+    {
+      "date": "2026-07-22",
+      "title": "Beta brand review",
+      "project_id": "p-beta",
+      "client": "Beta Studio",
+      "minutes": 60,
+      "attendees": 5
+    },
+    {
+      "date": "2026-07-23",
+      "title": "Nova discovery workshop",
+      "project_id": "p-nova",
+      "client": "Nova Health",
+      "minutes": 30,
+      "attendees": 6
+    },
+    {
+      "date": "2026-07-24",
+      "title": "Internal standup",
+      "project_id": "p-internal",
+      "client": "Internal",
+      "minutes": 50,
+      "attendees": 6
+    },
+    {
+      "date": "2026-07-28",
+      "title": "Acme scope sync",
+      "project_id": "p-acme",
+      "client": "Acme Corp",
+      "minutes": 60,
+      "attendees": 4
+    }
+  ],
+  "directory": {
+    "workspaces": [
+      {
+        "workspace_id": "ws-demo",
+        "name": "Rivera Studio",
+        "team_tree": [
+          {
+            "team_id": "team-demo",
+            "name": "Studio",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

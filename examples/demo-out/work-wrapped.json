@@ -1,0 +1,536 @@
+{
+  "version": "1.0.0",
+  "window_start": "2026-06-29",
+  "window_end": "2026-07-28",
+  "timezone": "America/Chicago",
+  "user": "Alex Rivera",
+  "workspace": "Rivera Studio",
+  "source": "fixture",
+  "total_minutes": 9429,
+  "total_hours": 157.2,
+  "active_days": 25,
+  "avg_hours_active_day": 6.29,
+  "billable_minutes": 7785,
+  "billable_pct": 82.6,
+  "meeting_minutes": 635,
+  "meeting_pct": 6.7,
+  "deep_work_minutes": 8794,
+  "top_projects": [
+    {
+      "project_id": "p-acme",
+      "name": "Acme Corp \u00b7 website redesign",
+      "client": "Acme Corp",
+      "minutes": 3514,
+      "hours": 58.6,
+      "share_pct": 37.3,
+      "billable": true,
+      "budget_hours": 120.0,
+      "budget_used_pct": 48.8
+    },
+    {
+      "project_id": "p-beta",
+      "name": "Beta Studio \u00b7 brand refresh",
+      "client": "Beta Studio",
+      "minutes": 2668,
+      "hours": 44.5,
+      "share_pct": 28.3,
+      "billable": true,
+      "budget_hours": 80.0,
+      "budget_used_pct": 55.6
+    },
+    {
+      "project_id": "p-internal",
+      "name": "Internal \u00b7 ops & tooling",
+      "client": "Internal",
+      "minutes": 1644,
+      "hours": 27.4,
+      "share_pct": 17.4,
+      "billable": false,
+      "budget_hours": null,
+      "budget_used_pct": null
+    },
+    {
+      "project_id": "p-nova",
+      "name": "Nova Health \u00b7 discovery",
+      "client": "Nova Health",
+      "minutes": 1603,
+      "hours": 26.7,
+      "share_pct": 17.0,
+      "billable": true,
+      "budget_hours": 40.0,
+      "budget_used_pct": 66.8
+    }
+  ],
+  "top_clients": [
+    {
+      "name": "Acme Corp",
+      "minutes": 3514,
+      "hours": 58.6,
+      "share_pct": 37.3
+    },
+    {
+      "name": "Beta Studio",
+      "minutes": 2668,
+      "hours": 44.5,
+      "share_pct": 28.3
+    },
+    {
+      "name": "Internal",
+      "minutes": 1644,
+      "hours": 27.4,
+      "share_pct": 17.4
+    },
+    {
+      "name": "Nova Health",
+      "minutes": 1603,
+      "hours": 26.7,
+      "share_pct": 17.0
+    }
+  ],
+  "top_activities": [
+    {
+      "title": "Logo exploration round 2",
+      "minutes": 1048,
+      "hours": 17.5,
+      "project": "Beta Studio \u00b7 brand refresh"
+    },
+    {
+      "title": "Homepage component build",
+      "minutes": 1030,
+      "hours": 17.2,
+      "project": "Acme Corp \u00b7 website redesign"
+    },
+    {
+      "title": "Client email + estimate update",
+      "minutes": 760,
+      "hours": 12.7,
+      "project": "Acme Corp \u00b7 website redesign"
+    },
+    {
+      "title": "Budget revision after scope call",
+      "minutes": 697,
+      "hours": 11.6,
+      "project": "Acme Corp \u00b7 website redesign"
+    },
+    {
+      "title": "Stakeholder interviews notes",
+      "minutes": 649,
+      "hours": 10.8,
+      "project": "Nova Health \u00b7 discovery"
+    },
+    {
+      "title": "Weekly ops standup notes",
+      "minutes": 611,
+      "hours": 10.2,
+      "project": "Internal \u00b7 ops & tooling"
+    },
+    {
+      "title": "QA pass on staging",
+      "minutes": 578,
+      "hours": 9.6,
+      "project": "Acme Corp \u00b7 website redesign"
+    },
+    {
+      "title": "Brand system tokens",
+      "minutes": 562,
+      "hours": 9.4,
+      "project": "Beta Studio \u00b7 brand refresh"
+    },
+    {
+      "title": "Color accessibility check",
+      "minutes": 562,
+      "hours": 9.4,
+      "project": "Beta Studio \u00b7 brand refresh"
+    },
+    {
+      "title": "Hiring pipeline review",
+      "minutes": 524,
+      "hours": 8.7,
+      "project": "Internal \u00b7 ops & tooling"
+    },
+    {
+      "title": "Journey map workshop prep",
+      "minutes": 504,
+      "hours": 8.4,
+      "project": "Nova Health \u00b7 discovery"
+    },
+    {
+      "title": "Presentation deck for kickoff",
+      "minutes": 496,
+      "hours": 8.3,
+      "project": "Beta Studio \u00b7 brand refresh"
+    }
+  ],
+  "top_apps": [
+    {
+      "name": "Linear",
+      "minutes": 1885,
+      "hours": 31.4
+    },
+    {
+      "name": "Zoom",
+      "minutes": 1351,
+      "hours": 22.5
+    },
+    {
+      "name": "Gmail",
+      "minutes": 1294,
+      "hours": 21.6
+    },
+    {
+      "name": "Figma",
+      "minutes": 1249,
+      "hours": 20.8
+    },
+    {
+      "name": "Slack",
+      "minutes": 1075,
+      "hours": 17.9
+    },
+    {
+      "name": "VS Code",
+      "minutes": 899,
+      "hours": 15.0
+    },
+    {
+      "name": "Notion",
+      "minutes": 853,
+      "hours": 14.2
+    },
+    {
+      "name": "Google Chrome",
+      "minutes": 823,
+      "hours": 13.7
+    }
+  ],
+  "busiest_day": {
+    "date": "2026-07-06",
+    "minutes": 515,
+    "hours": 8.6
+  },
+  "quietest_active_day": {
+    "date": "2026-07-11",
+    "minutes": 20,
+    "hours": 0.3
+  },
+  "weekday_mix": [
+    {
+      "weekday": "Monday",
+      "minutes": 2194,
+      "hours": 36.6
+    },
+    {
+      "weekday": "Tuesday",
+      "minutes": 1983,
+      "hours": 33.0
+    },
+    {
+      "weekday": "Wednesday",
+      "minutes": 1588,
+      "hours": 26.5
+    },
+    {
+      "weekday": "Thursday",
+      "minutes": 1795,
+      "hours": 29.9
+    },
+    {
+      "weekday": "Friday",
+      "minutes": 1793,
+      "hours": 29.9
+    },
+    {
+      "weekday": "Saturday",
+      "minutes": 49,
+      "hours": 0.8
+    },
+    {
+      "weekday": "Sunday",
+      "minutes": 27,
+      "hours": 0.5
+    }
+  ],
+  "daily_series": [
+    {
+      "date": "2026-06-29",
+      "minutes": 483,
+      "hours": 8.05
+    },
+    {
+      "date": "2026-06-30",
+      "minutes": 321,
+      "hours": 5.35
+    },
+    {
+      "date": "2026-07-01",
+      "minutes": 467,
+      "hours": 7.78
+    },
+    {
+      "date": "2026-07-02",
+      "minutes": 417,
+      "hours": 6.95
+    },
+    {
+      "date": "2026-07-03",
+      "minutes": 457,
+      "hours": 7.62
+    },
+    {
+      "date": "2026-07-04",
+      "minutes": 0,
+      "hours": 0.0
+    },
+    {
+      "date": "2026-07-05",
+      "minutes": 27,
+      "hours": 0.45
+    },
+    {
+      "date": "2026-07-06",
+      "minutes": 515,
+      "hours": 8.58
+    },
+    {
+      "date": "2026-07-07",
+      "minutes": 362,
+      "hours": 6.03
+    },
+    {
+      "date": "2026-07-08",
+      "minutes": 328,
+      "hours": 5.47
+    },
+    {
+      "date": "2026-07-09",
+      "minutes": 423,
+      "hours": 7.05
+    },
+    {
+      "date": "2026-07-10",
+      "minutes": 512,
+      "hours": 8.53
+    },
+    {
+      "date": "2026-07-11",
+      "minutes": 20,
+      "hours": 0.33
+    },
+    {
+      "date": "2026-07-12",
+      "minutes": 0,
+      "hours": 0.0
+    },
+    {
+      "date": "2026-07-13",
+      "minutes": 383,
+      "hours": 6.38
+    },
+    {
+      "date": "2026-07-14",
+      "minutes": 457,
+      "hours": 7.62
+    },
+    {
+      "date": "2026-07-15",
+      "minutes": 354,
+      "hours": 5.9
+    },
+    {
+      "date": "2026-07-16",
+      "minutes": 509,
+      "hours": 8.48
+    },
+    {
+      "date": "2026-07-17",
+      "minutes": 380,
+      "hours": 6.33
+    },
+    {
+      "date": "2026-07-18",
+      "minutes": 29,
+      "hours": 0.48
+    },
+    {
+      "date": "2026-07-19",
+      "minutes": 0,
+      "hours": 0.0
+    },
+    {
+      "date": "2026-07-20",
+      "minutes": 386,
+      "hours": 6.43
+    },
+    {
+      "date": "2026-07-21",
+      "minutes": 489,
+      "hours": 8.15
+    },
+    {
+      "date": "2026-07-22",
+      "minutes": 439,
+      "hours": 7.32
+    },
+    {
+      "date": "2026-07-23",
+      "minutes": 446,
+      "hours": 7.43
+    },
+    {
+      "date": "2026-07-24",
+      "minutes": 444,
+      "hours": 7.4
+    },
+    {
+      "date": "2026-07-25",
+      "minutes": 0,
+      "hours": 0.0
+    },
+    {
+      "date": "2026-07-26",
+      "minutes": 0,
+      "hours": 0.0
+    },
+    {
+      "date": "2026-07-27",
+      "minutes": 427,
+      "hours": 7.12
+    },
+    {
+      "date": "2026-07-28",
+      "minutes": 354,
+      "hours": 5.9
+    }
+  ],
+  "meetings": [
+    {
+      "date": "2026-06-30",
+      "title": "Weekly leadership",
+      "client": "Internal",
+      "minutes": 45,
+      "attendees": 4
+    },
+    {
+      "date": "2026-07-01",
+      "title": "Beta brand review",
+      "client": "Beta Studio",
+      "minutes": 30,
+      "attendees": 5
+    },
+    {
+      "date": "2026-07-02",
+      "title": "Beta brand review",
+      "client": "Beta Studio",
+      "minutes": 30,
+      "attendees": 6
+    },
+    {
+      "date": "2026-07-03",
+      "title": "Acme scope sync",
+      "client": "Acme Corp",
+      "minutes": 60,
+      "attendees": 2
+    },
+    {
+      "date": "2026-07-07",
+      "title": "Beta brand review",
+      "client": "Beta Studio",
+      "minutes": 25,
+      "attendees": 2
+    },
+    {
+      "date": "2026-07-08",
+      "title": "Acme scope sync",
+      "client": "Acme Corp",
+      "minutes": 25,
+      "attendees": 2
+    },
+    {
+      "date": "2026-07-10",
+      "title": "Weekly leadership",
+      "client": "Internal",
+      "minutes": 25,
+      "attendees": 6
+    },
+    {
+      "date": "2026-07-13",
+      "title": "Acme scope sync",
+      "client": "Acme Corp",
+      "minutes": 60,
+      "attendees": 2
+    },
+    {
+      "date": "2026-07-15",
+      "title": "Nova discovery workshop",
+      "client": "Nova Health",
+      "minutes": 30,
+      "attendees": 3
+    },
+    {
+      "date": "2026-07-20",
+      "title": "Weekly leadership",
+      "client": "Internal",
+      "minutes": 45,
+      "attendees": 4
+    },
+    {
+      "date": "2026-07-21",
+      "title": "Weekly leadership",
+      "client": "Internal",
+      "minutes": 60,
+      "attendees": 4
+    },
+    {
+      "date": "2026-07-22",
+      "title": "Beta brand review",
+      "client": "Beta Studio",
+      "minutes": 60,
+      "attendees": 5
+    },
+    {
+      "date": "2026-07-23",
+      "title": "Nova discovery workshop",
+      "client": "Nova Health",
+      "minutes": 30,
+      "attendees": 6
+    },
+    {
+      "date": "2026-07-24",
+      "title": "Internal standup",
+      "client": "Internal",
+      "minutes": 50,
+      "attendees": 6
+    },
+    {
+      "date": "2026-07-28",
+      "title": "Acme scope sync",
+      "client": "Acme Corp",
+      "minutes": 60,
+      "attendees": 4
+    }
+  ],
+  "meeting_count": 15,
+  "budget_alerts": [],
+  "identity_cards": [
+    {
+      "title": "Deep Work Resident",
+      "blurb": "147h outside meetings. You protected focus blocks."
+    },
+    {
+      "title": "Consistency Machine",
+      "blurb": "25 active days in the window. Showed up on repeat."
+    },
+    {
+      "title": "Billable Beast",
+      "blurb": "83% billable mix. Finance will send a thank-you note."
+    }
+  ],
+  "headline": "157h across 25 days",
+  "one_liner": "Your last 30 days: 157.2h tracked, led by Acme Corp \u00b7 website redesign, 7% meetings.",
+  "shoutouts": [
+    "Busiest day: 2026-07-06 \u00b7 8.6h",
+    "Top activity: Logo exploration round 2 \u00b7 17h",
+    "Home app: Linear"
+  ],
+  "warnings": []
+}

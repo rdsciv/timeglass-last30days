@@ -1,0 +1,24 @@
+{
+  "name": "timeglass-last30days",
+  "version": "1.0.0",
+  "description": "Work Wrapped: review your last 30 days from Timeglass MCP — projects, meetings, billable mix, budget risk. No scraping.",
+  "author": {
+    "name": "rdsciv",
+    "url": "https://github.com/rdsciv"
+  },
+  "homepage": "https://github.com/rdsciv/timeglass-last30days",
+  "repository": "https://github.com/rdsciv/timeglass-last30days",
+  "license": "MIT",
+  "keywords": [
+    "timeglass",
+    "timesheet",
+    "productivity",
+    "mcp",
+    "work-wrapped",
+    "monthly-review",
+    "last30days",
+    "ai-skill",
+    "claude",
+    "codex"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "timeglass-last30days",
+  "owner": {
+    "name": "rdsciv",
+    "url": "https://github.com/rdsciv"
+  },
+  "metadata": {
+    "description": "Marketplace hosting the timeglass-last30days Work Wrapped skill."
+  },
+  "plugins": [
+    {
+      "name": "timeglass-last30days",
+      "description": "Work Wrapped: review your last 30 days from Timeglass MCP — projects, meetings, billable mix, budget risk. No scraping.",
+      "version": "1.0.0",
+      "author": {
+        "name": "rdsciv",
+        "url": "https://github.com/rdsciv"
+      },
+      "source": "./",
+      "category": "productivity",
+      "homepage": "https://github.com/rdsciv/timeglass-last30days"
+    }
+  ]
+}

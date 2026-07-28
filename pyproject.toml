@@ -1,0 +1,13 @@
+[project]
+name = "timeglass-last30days"
+version = "1.0.0"
+description = "Work Wrapped: last 30 days of work from Timeglass MCP"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "rdsciv" }]
+keywords = ["timeglass", "mcp", "agent-skills", "productivity"]
+
+[project.urls]
+Homepage = "https://github.com/rdsciv/timeglass-last30days"
+Repository = "https://github.com/rdsciv/timeglass-last30days"

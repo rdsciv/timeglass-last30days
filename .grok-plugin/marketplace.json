@@ -1,0 +1,24 @@
+{
+  "name": "timeglass-last30days",
+  "owner": {
+    "name": "rdsciv",
+    "url": "https://github.com/rdsciv"
+  },
+  "metadata": {
+    "description": "Grok marketplace entry for timeglass-last30days."
+  },
+  "plugins": [
+    {
+      "name": "timeglass-last30days",
+      "description": "Work Wrapped from Timeglass MCP for your last 30 days.",
+      "version": "1.0.0",
+      "author": {
+        "name": "rdsciv",
+        "url": "https://github.com/rdsciv"
+      },
+      "source": "./",
+      "category": "productivity",
+      "homepage": "https://github.com/rdsciv/timeglass-last30days"
+    }
+  ]
+}
