@@ -329,40 +329,48 @@
   }
   .final .cta { justify-content: center; }
 
-  /* Closer offer — after the scroll, convert */
+  /* Timeglass signup closer — official brand colors + mark */
   .offer {
-    background: var(--forest);
-    color: #fff9f2;
+    background: #0B1A1C;
+    color: #FAF8F4;
     border-radius: 24px;
     padding: 40px 28px 36px;
     text-align: center;
     margin: 12px 0 48px;
     box-shadow: var(--shadow);
   }
-  .offer .eyebrow {
-    margin: 0 0 12px;
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: rgba(255, 249, 242, 0.58);
+  .offer-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 16px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: -0.02em;
+    color: #FAF8F4;
+    text-decoration: none;
+  }
+  .offer-brand svg {
+    width: 30px;
+    height: 30px;
+    display: block;
   }
   .offer h2 {
-    margin: 0 0 12px;
+    margin: 0 auto 12px;
     font-family: var(--font-display);
     font-style: normal;
-    font-weight: 600;
+    font-weight: 700;
     font-size: clamp(1.85rem, 3.8vw, 2.55rem);
     letter-spacing: -0.03em;
     line-height: 1.12;
-    max-width: 16ch;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 18ch;
+    color: #FAF8F4;
   }
   .offer p {
     margin: 0 auto 24px;
-    max-width: 34ch;
-    color: rgba(255, 249, 242, 0.72);
+    max-width: 36ch;
+    color: rgba(250, 248, 244, 0.72);
     font-size: 1.05rem;
     line-height: 1.5;
   }
@@ -373,8 +381,8 @@
     min-height: 50px;
     padding: 0 22px;
     border-radius: 999px;
-    background: var(--paper);
-    color: var(--forest);
+    background: #FAF8F4;
+    color: #0B1A1C;
     font-weight: 700;
     font-size: 1rem;
     text-decoration: none;
@@ -386,7 +394,7 @@
   .offer .fine {
     margin: 14px 0 0;
     font-size: 0.86rem;
-    color: rgba(255, 249, 242, 0.55);
+    color: rgba(250, 248, 244, 0.55);
   }
 
   footer.site {
@@ -506,11 +514,19 @@ open out/work-wrapped.html</pre>
     </section>
 
     <section class="offer" aria-labelledby="offer-title">
-      <p class="eyebrow">Timeglass</p>
+      <a class="offer-brand" href="https://timeglass.ai">
+        <svg width="30" height="30" viewBox="0 0 512 512" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <g transform="matrix(1.2 0 0 1.2 -51.1 -51.3)">
+            <path d="M125.096 161.796C102.873 139.573 90.3875 109.431 90.3875 78H77V435H90.3875C90.3875 403.569 102.873 373.427 125.096 351.204L158.857 317.443C192.514 283.786 192.514 229.214 158.857 195.557L125.096 161.796Z" fill="#FAF8F4"/>
+            <path d="M420.612 78C420.612 109.431 408.127 139.573 385.904 161.796L352.143 195.557C318.486 229.214 318.486 283.786 352.143 317.443L385.904 351.204C408.127 373.427 420.612 403.569 420.612 435H434V78H420.612Z" fill="#FAF8F4"/>
+          </g>
+        </svg>
+        <span>Timeglass</span>
+      </a>
       <h2 id="offer-title">Free forever for the first person at your company.</h2>
       <p>Click here to sign up. No credit card required.</p>
       <a class="btn-offer" href="https://app.timeglass.ai/sign-up">Click here to sign up</a>
-      <p class="fine">First seat free forever · cancel anytime · no card to start</p>
+      <p class="fine">For the first person at your company · free forever · no credit card required</p>
     </section>
 
     <footer class="site">

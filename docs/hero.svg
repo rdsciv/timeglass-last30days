@@ -61,6 +61,6 @@
     <rect x="28" y="284" width="324" height="10" rx="5" fill="rgba(255,249,242,0.12)"/>
     <rect x="28" y="284" width="100" height="10" rx="5" fill="#fff9f2"/>
     <text x="28" y="350" class="on-dark-m" font-size="15">Free forever for the first person</text>
-    <text x="28" y="374" class="on-dark-m" font-size="15">at your company · no card required</text>
+    <text x="28" y="374" class="on-dark-m" font-size="15">at your company · no credit card required</text>
   </g>
 </svg>
