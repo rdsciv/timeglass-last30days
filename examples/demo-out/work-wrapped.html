@@ -4,184 +4,402 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Work Wrapped — Alex Rivera</title>
-<meta name="description" content="Timeglass Work Wrapped — your last 30 days of real work, from MCP." />
+<meta name="description" content="Work Wrapped — your last 30 days from Timeglass MCP." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet" />
 <style>
-  :root {
-    --bg: #07080c;
-    --bg2: #0e1018;
-    --card: #141826;
-    --card2: #1a1f30;
-    --text: #f4f1ea;
-    --muted: #9aa3b5;
-    --line: rgba(255,255,255,0.08);
-    --accent: #7c5cff;
-    --accent2: #3de0c5;
-    --warn: #ffb020;
-    --danger: #ff5d6c;
-    --good: #3dd68c;
-    --shadow: 0 20px 60px rgba(0,0,0,.45);
-    --radius: 22px;
-  }
-  * { box-sizing: border-box; }
-  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text);
-    font-family: "DM Sans", ui-sans-serif, system-ui, sans-serif; }
-  body {
-    min-height: 100vh;
-    background:
-      radial-gradient(1200px 600px at 10% -10%, rgba(124,92,255,.28), transparent 55%),
-      radial-gradient(900px 500px at 90% 0%, rgba(61,224,197,.18), transparent 50%),
-      radial-gradient(700px 400px at 50% 100%, rgba(255,93,108,.10), transparent 55%),
-      var(--bg);
-  }
-  .wrap { max-width: 980px; margin: 0 auto; padding: 32px 20px 80px; }
-  .top {
-    display: flex; justify-content: space-between; align-items: flex-start; gap: 16px;
-    margin-bottom: 28px; flex-wrap: wrap;
-  }
-  .brand { display: flex; gap: 12px; align-items: center; }
-  .logo {
-    width: 42px; height: 42px; border-radius: 14px;
-    background: linear-gradient(135deg, var(--accent), var(--accent2));
-    display: grid; place-items: center; font-weight: 700; letter-spacing: -0.04em;
-    box-shadow: 0 8px 24px rgba(124,92,255,.35);
-  }
-  .brand h1 { margin: 0; font-size: 1.15rem; letter-spacing: -0.03em; }
-  .brand p { margin: 2px 0 0; color: var(--muted); font-size: .9rem; }
-  .pill {
-    font-family: "IBM Plex Mono", ui-monospace, monospace;
-    font-size: .75rem; color: var(--muted);
-    border: 1px solid var(--line); background: rgba(255,255,255,.03);
-    padding: 8px 12px; border-radius: 999px;
-  }
-  .hero {
-    background: linear-gradient(160deg, rgba(124,92,255,.18), rgba(20,24,38,.9) 45%, rgba(61,224,197,.08));
-    border: 1px solid var(--line); border-radius: 28px; padding: 36px 28px;
-    box-shadow: var(--shadow); margin-bottom: 18px; position: relative; overflow: hidden;
-  }
-  .hero::after {
-    content: ""; position: absolute; inset: auto -20% -40% 40%; height: 220px;
-    background: radial-gradient(circle, rgba(61,224,197,.25), transparent 60%);
-    pointer-events: none;
-  }
-  .kicker {
-    font-family: "IBM Plex Mono", monospace; text-transform: uppercase; letter-spacing: .14em;
-    font-size: .72rem; color: var(--accent2); margin: 0 0 10px;
-  }
-  .hero h2 {
-    margin: 0 0 10px; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.05;
-    letter-spacing: -0.045em; max-width: 16ch;
-  }
-  .hero .sub { color: var(--muted); font-size: 1.05rem; max-width: 46ch; margin: 0 0 22px; }
-  .metrics { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 10px; }
-  @media (max-width: 720px) { .metrics { grid-template-columns: repeat(2, minmax(0,1fr)); } }
-  .metric {
-    background: rgba(0,0,0,.22); border: 1px solid var(--line); border-radius: 16px; padding: 14px 14px 12px;
-  }
-  .metric .label { color: var(--muted); font-size: .78rem; margin-bottom: 6px; }
-  .metric .value { font-size: 1.45rem; font-weight: 700; letter-spacing: -0.03em; }
-  .grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 14px; }
-  @media (max-width: 840px) { .grid { grid-template-columns: 1fr; } }
-  .card {
-    background: linear-gradient(180deg, var(--card), var(--card2));
-    border: 1px solid var(--line); border-radius: var(--radius); padding: 20px;
-    box-shadow: var(--shadow);
-  }
-  .card h3 { margin: 0 0 14px; font-size: 1rem; letter-spacing: -0.02em; }
-  .row { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: center; margin: 10px 0; }
-  .name { font-size: .95rem; }
-  .meta { color: var(--muted); font-size: .78rem; margin-top: 2px; }
-  .track { height: 8px; background: rgba(255,255,255,.06); border-radius: 99px; overflow: hidden; margin-top: 8px; }
-  .fill { height: 100%; border-radius: 99px; background: linear-gradient(90deg, var(--accent), var(--accent2)); }
-  .hours { font-family: "IBM Plex Mono", monospace; font-size: .85rem; color: var(--muted); }
-  .cards { display: grid; gap: 10px; }
-  .idcard {
-    border-radius: 16px; padding: 14px 16px; border: 1px solid var(--line);
-    background: rgba(124,92,255,.08);
-  }
-  .idcard strong { display: block; margin-bottom: 4px; }
-  .idcard span { color: var(--muted); font-size: .9rem; }
-  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
-  .chip {
-    border-radius: 999px; padding: 8px 12px; font-size: .82rem;
-    background: rgba(255,255,255,.04); border: 1px solid var(--line); color: var(--text);
-  }
-  .warn { border-color: rgba(255,176,32,.35); background: rgba(255,176,32,.08); }
-  .danger { border-color: rgba(255,93,108,.4); background: rgba(255,93,108,.1); }
-  .chart {
-    display: flex; align-items: flex-end; gap: 4px; height: 120px; margin-top: 8px;
-    padding-top: 8px;
-  }
-  .bar {
-    flex: 1; border-radius: 6px 6px 2px 2px; min-width: 0;
-    background: linear-gradient(180deg, var(--accent2), rgba(124,92,255,.55));
-    opacity: .9;
-  }
-  .bar.zero { background: rgba(255,255,255,.06); height: 4px !important; }
-  .footer {
-    margin-top: 22px; color: var(--muted); font-size: .85rem;
-    display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
-  }
-  a { color: var(--accent2); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  .stack { display: grid; gap: 14px; margin-top: 14px; }
+/* Hallmark · studied-DNA (source: timeglass.ai) · paper cream · ink forest · accent teal
+ * Macrostructure: product report · Nav: none (artifact) · Footer: quiet credit
+ */
+:root {
+  --paper: #f4f1ea;
+  --paper-2: #ebe6db;
+  --paper-3: #ffffff;
+  --ink: #14201a;
+  --ink-soft: #3d4a43;
+  --muted: #6b756f;
+  --line: #ddd6c8;
+  --line-soft: #e8e2d6;
+  --forest: #1a2c24;
+  --forest-2: #243830;
+  --teal: #1f8a7a;
+  --teal-deep: #17695c;
+  --amber: #c9852a;
+  --amber-soft: #f3e2c4;
+  --rose: #b54a4a;
+  --good: #2f7d55;
+  --shadow: 0 18px 40px rgba(20, 32, 26, 0.08);
+  --radius: 14px;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", serif;
+  --measure: 68ch;
+}
+
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01" on, "cv11" on;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(900px 420px at 100% 0%, rgba(31, 138, 122, 0.07), transparent 55%),
+    var(--paper);
+}
+
+.page {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 28px 20px 72px;
+}
+
+/* Masthead */
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.mark {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--forest);
+  color: var(--paper);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+}
+.brand-text strong {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.brand-text span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.82rem;
+  margin-top: 2px;
+}
+.pill {
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  background: var(--paper-3);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 12px;
+  white-space: nowrap;
+}
+
+/* Hero band — forest statement, Timeglass marketing voice */
+.hero {
+  background: var(--forest);
+  color: #f7f4ee;
+  border-radius: 22px;
+  padding: 36px 32px 30px;
+  box-shadow: var(--shadow);
+  margin-bottom: 18px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  right: -80px;
+  top: -80px;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(31, 138, 122, 0.28), transparent 65%);
+  pointer-events: none;
+}
+.kicker {
+  margin: 0 0 14px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(247, 244, 238, 0.62);
+}
+.hero h1 {
+  margin: 0 0 12px;
+  font-family: var(--font-display);
+  font-style: normal;
+  font-weight: 600;
+  font-size: clamp(2.35rem, 5.4vw, 3.55rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  max-width: 14ch;
+  overflow-wrap: anywhere;
+}
+.hero .lede {
+  margin: 0 0 26px;
+  max-width: 42ch;
+  color: rgba(247, 244, 238, 0.78);
+  font-size: 1.02rem;
+  line-height: 1.5;
+}
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+@media (max-width: 720px) {
+  .hero { padding: 28px 20px 22px; }
+  .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+.metric {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 14px 14px 12px;
+}
+.metric .label {
+  color: rgba(247, 244, 238, 0.58);
+  font-size: 0.75rem;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+.metric .value {
+  font-size: 1.45rem;
+  font-weight: 650;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Layout */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1.25fr 0.9fr;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+@media (max-width: 840px) {
+  .grid-2 { grid-template-columns: 1fr; }
+}
+.card {
+  background: var(--paper-3);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 20px 20px 16px;
+  box-shadow: 0 1px 0 rgba(20, 32, 26, 0.03);
+}
+.card h2 {
+  margin: 0 0 16px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: start;
+  padding: 11px 0;
+  border-top: 1px solid var(--line-soft);
+}
+.row:first-of-type { border-top: 0; padding-top: 0; }
+.name {
+  font-size: 0.94rem;
+  font-weight: 550;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.meta {
+  color: var(--muted);
+  font-size: 0.78rem;
+  margin-top: 3px;
+  line-height: 1.35;
+}
+.hours {
+  font-size: 0.86rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-soft);
+  font-weight: 500;
+  padding-top: 2px;
+}
+.track {
+  height: 6px;
+  background: var(--paper-2);
+  border-radius: 99px;
+  overflow: hidden;
+  margin-top: 9px;
+}
+.fill {
+  height: 100%;
+  border-radius: 99px;
+  background: linear-gradient(90deg, var(--teal-deep), var(--teal));
+}
+
+/* Identity — quiet product cards, not neon chips */
+.identity-list {
+  display: grid;
+  gap: 10px;
+}
+.idcard {
+  border: 1px solid var(--line);
+  background: var(--paper);
+  border-radius: 12px;
+  padding: 14px 14px 13px;
+}
+.idcard strong {
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+}
+.idcard span {
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.4;
+}
+
+/* Rhythm chart */
+.chart-card { margin-bottom: 14px; }
+.chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  height: 128px;
+  padding-top: 8px;
+}
+.bar {
+  flex: 1;
+  min-width: 0;
+  border-radius: 5px 5px 2px 2px;
+  background: var(--teal);
+  opacity: 0.92;
+}
+.bar:nth-child(3n) { background: #2aa394; }
+.bar:nth-child(4n) { background: #178072; }
+.bar.zero {
+  background: var(--paper-2);
+  height: 4px !important;
+  opacity: 1;
+}
+
+/* Bottom grid */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.chip {
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink-soft);
+  font-size: 0.8rem;
+  padding: 8px 11px;
+  line-height: 1.2;
+}
+.chip.warn {
+  border-color: #e4c48a;
+  background: var(--amber-soft);
+  color: #7a4e12;
+}
+.chip.danger {
+  border-color: #e2b4b4;
+  background: #f8e8e8;
+  color: var(--rose);
+}
+
+.footer {
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+.footer a {
+  color: var(--teal-deep);
+  text-decoration: none;
+  font-weight: 500;
+}
+.footer a:hover { text-decoration: underline; }
+
+.empty {
+  color: var(--muted);
+  font-size: 0.9rem;
+  padding: 4px 0 8px;
+}
 </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="top">
+  <div class="page">
+    <header class="masthead">
       <div class="brand">
-        <div class="logo">TG</div>
-        <div>
-          <h1>Work Wrapped</h1>
-          <p>Last 30 days from Timeglass MCP</p>
+        <div class="mark" aria-hidden="true">TG</div>
+        <div class="brand-text">
+          <strong>Work Wrapped</strong>
+          <span>Last 30 days · Timeglass MCP</span>
         </div>
       </div>
       <div class="pill" id="window">2026-06-29 → 2026-07-28</div>
-    </div>
+    </header>
 
-    <section class="hero">
-      <p class="kicker" id="kicker">Your year in review energy · monthly edition</p>
-      <h2 id="headline">Loading…</h2>
-      <p class="sub" id="oneliner"></p>
+    <section class="hero" aria-labelledby="headline">
+      <p class="kicker">Monthly review</p>
+      <h1 id="headline">Loading…</h1>
+      <p class="lede" id="oneliner"></p>
       <div class="metrics" id="metrics"></div>
     </section>
 
-    <div class="grid">
+    <div class="grid-2">
       <section class="card">
-        <h3>Top projects</h3>
+        <h2>Where the month went</h2>
         <div id="projects"></div>
       </section>
       <section class="card">
-        <h3>Identity cards</h3>
-        <div class="cards" id="identity"></div>
+        <h2>How the month reads</h2>
+        <div class="identity-list" id="identity"></div>
       </section>
     </div>
 
-    <div class="stack">
+    <section class="card chart-card">
+      <h2>Daily rhythm</h2>
+      <div class="chart" id="chart" role="img" aria-label="Daily hours chart"></div>
+    </section>
+
+    <div class="grid-2">
       <section class="card">
-        <h3>Daily rhythm</h3>
-        <div class="chart" id="chart"></div>
+        <h2>Top activities</h2>
+        <div id="activities"></div>
       </section>
-      <div class="grid">
-        <section class="card">
-          <h3>Top activities</h3>
-          <div id="activities"></div>
-        </section>
-        <section class="card">
-          <h3>Shoutouts & budget</h3>
-          <div class="chips" id="chips"></div>
-        </section>
-      </div>
+      <section class="card">
+        <h2>Notes &amp; budget</h2>
+        <div class="chips" id="chips"></div>
+      </section>
     </div>
 
-    <div class="footer">
+    <footer class="footer">
       <div>Built with <a href="https://timeglass.ai" target="_blank" rel="noreferrer">Timeglass</a> · no scraping · your work record only</div>
       <div id="source"></div>
-    </div>
+    </footer>
   </div>
+
 <script id="stats" type="application/json">{"version": "1.0.0", "window_start": "2026-06-29", "window_end": "2026-07-28", "timezone": "America/Chicago", "user": "Alex Rivera", "workspace": "Rivera Studio", "source": "fixture", "total_minutes": 9429, "total_hours": 157.2, "active_days": 25, "avg_hours_active_day": 6.29, "billable_minutes": 7785, "billable_pct": 82.6, "meeting_minutes": 635, "meeting_pct": 6.7, "deep_work_minutes": 8794, "top_projects": [{"project_id": "p-acme", "name": "Acme Corp · website redesign", "client": "Acme Corp", "minutes": 3514, "hours": 58.6, "share_pct": 37.3, "billable": true, "budget_hours": 120.0, "budget_used_pct": 48.8}, {"project_id": "p-beta", "name": "Beta Studio · brand refresh", "client": "Beta Studio", "minutes": 2668, "hours": 44.5, "share_pct": 28.3, "billable": true, "budget_hours": 80.0, "budget_used_pct": 55.6}, {"project_id": "p-internal", "name": "Internal · ops \u0026 tooling", "client": "Internal", "minutes": 1644, "hours": 27.4, "share_pct": 17.4, "billable": false, "budget_hours": null, "budget_used_pct": null}, {"project_id": "p-nova", "name": "Nova Health · discovery", "client": "Nova Health", "minutes": 1603, "hours": 26.7, "share_pct": 17.0, "billable": true, "budget_hours": 40.0, "budget_used_pct": 66.8}], "top_clients": [{"name": "Acme Corp", "minutes": 3514, "hours": 58.6, "share_pct": 37.3}, {"name": "Beta Studio", "minutes": 2668, "hours": 44.5, "share_pct": 28.3}, {"name": "Internal", "minutes": 1644, "hours": 27.4, "share_pct": 17.4}, {"name": "Nova Health", "minutes": 1603, "hours": 26.7, "share_pct": 17.0}], "top_activities": [{"title": "Logo exploration round 2", "minutes": 1048, "hours": 17.5, "project": "Beta Studio · brand refresh"}, {"title": "Homepage component build", "minutes": 1030, "hours": 17.2, "project": "Acme Corp · website redesign"}, {"title": "Client email + estimate update", "minutes": 760, "hours": 12.7, "project": "Acme Corp · website redesign"}, {"title": "Budget revision after scope call", "minutes": 697, "hours": 11.6, "project": "Acme Corp · website redesign"}, {"title": "Stakeholder interviews notes", "minutes": 649, "hours": 10.8, "project": "Nova Health · discovery"}, {"title": "Weekly ops standup notes", "minutes": 611, "hours": 10.2, "project": "Internal · ops \u0026 tooling"}, {"title": "QA pass on staging", "minutes": 578, "hours": 9.6, "project": "Acme Corp · website redesign"}, {"title": "Brand system tokens", "minutes": 562, "hours": 9.4, "project": "Beta Studio · brand refresh"}, {"title": "Color accessibility check", "minutes": 562, "hours": 9.4, "project": "Beta Studio · brand refresh"}, {"title": "Hiring pipeline review", "minutes": 524, "hours": 8.7, "project": "Internal · ops \u0026 tooling"}, {"title": "Journey map workshop prep", "minutes": 504, "hours": 8.4, "project": "Nova Health · discovery"}, {"title": "Presentation deck for kickoff", "minutes": 496, "hours": 8.3, "project": "Beta Studio · brand refresh"}], "top_apps": [{"name": "Linear", "minutes": 1885, "hours": 31.4}, {"name": "Zoom", "minutes": 1351, "hours": 22.5}, {"name": "Gmail", "minutes": 1294, "hours": 21.6}, {"name": "Figma", "minutes": 1249, "hours": 20.8}, {"name": "Slack", "minutes": 1075, "hours": 17.9}, {"name": "VS Code", "minutes": 899, "hours": 15.0}, {"name": "Notion", "minutes": 853, "hours": 14.2}, {"name": "Google Chrome", "minutes": 823, "hours": 13.7}], "busiest_day": {"date": "2026-07-06", "minutes": 515, "hours": 8.6}, "quietest_active_day": {"date": "2026-07-11", "minutes": 20, "hours": 0.3}, "weekday_mix": [{"weekday": "Monday", "minutes": 2194, "hours": 36.6}, {"weekday": "Tuesday", "minutes": 1983, "hours": 33.0}, {"weekday": "Wednesday", "minutes": 1588, "hours": 26.5}, {"weekday": "Thursday", "minutes": 1795, "hours": 29.9}, {"weekday": "Friday", "minutes": 1793, "hours": 29.9}, {"weekday": "Saturday", "minutes": 49, "hours": 0.8}, {"weekday": "Sunday", "minutes": 27, "hours": 0.5}], "daily_series": [{"date": "2026-06-29", "minutes": 483, "hours": 8.05}, {"date": "2026-06-30", "minutes": 321, "hours": 5.35}, {"date": "2026-07-01", "minutes": 467, "hours": 7.78}, {"date": "2026-07-02", "minutes": 417, "hours": 6.95}, {"date": "2026-07-03", "minutes": 457, "hours": 7.62}, {"date": "2026-07-04", "minutes": 0, "hours": 0.0}, {"date": "2026-07-05", "minutes": 27, "hours": 0.45}, {"date": "2026-07-06", "minutes": 515, "hours": 8.58}, {"date": "2026-07-07", "minutes": 362, "hours": 6.03}, {"date": "2026-07-08", "minutes": 328, "hours": 5.47}, {"date": "2026-07-09", "minutes": 423, "hours": 7.05}, {"date": "2026-07-10", "minutes": 512, "hours": 8.53}, {"date": "2026-07-11", "minutes": 20, "hours": 0.33}, {"date": "2026-07-12", "minutes": 0, "hours": 0.0}, {"date": "2026-07-13", "minutes": 383, "hours": 6.38}, {"date": "2026-07-14", "minutes": 457, "hours": 7.62}, {"date": "2026-07-15", "minutes": 354, "hours": 5.9}, {"date": "2026-07-16", "minutes": 509, "hours": 8.48}, {"date": "2026-07-17", "minutes": 380, "hours": 6.33}, {"date": "2026-07-18", "minutes": 29, "hours": 0.48}, {"date": "2026-07-19", "minutes": 0, "hours": 0.0}, {"date": "2026-07-20", "minutes": 386, "hours": 6.43}, {"date": "2026-07-21", "minutes": 489, "hours": 8.15}, {"date": "2026-07-22", "minutes": 439, "hours": 7.32}, {"date": "2026-07-23", "minutes": 446, "hours": 7.43}, {"date": "2026-07-24", "minutes": 444, "hours": 7.4}, {"date": "2026-07-25", "minutes": 0, "hours": 0.0}, {"date": "2026-07-26", "minutes": 0, "hours": 0.0}, {"date": "2026-07-27", "minutes": 427, "hours": 7.12}, {"date": "2026-07-28", "minutes": 354, "hours": 5.9}], "meetings": [{"date": "2026-06-30", "title": "Weekly leadership", "client": "Internal", "minutes": 45, "attendees": 4}, {"date": "2026-07-01", "title": "Beta brand review", "client": "Beta Studio", "minutes": 30, "attendees": 5}, {"date": "2026-07-02", "title": "Beta brand review", "client": "Beta Studio", "minutes": 30, "attendees": 6}, {"date": "2026-07-03", "title": "Acme scope sync", "client": "Acme Corp", "minutes": 60, "attendees": 2}, {"date": "2026-07-07", "title": "Beta brand review", "client": "Beta Studio", "minutes": 25, "attendees": 2}, {"date": "2026-07-08", "title": "Acme scope sync", "client": "Acme Corp", "minutes": 25, "attendees": 2}, {"date": "2026-07-10", "title": "Weekly leadership", "client": "Internal", "minutes": 25, "attendees": 6}, {"date": "2026-07-13", "title": "Acme scope sync", "client": "Acme Corp", "minutes": 60, "attendees": 2}, {"date": "2026-07-15", "title": "Nova discovery workshop", "client": "Nova Health", "minutes": 30, "attendees": 3}, {"date": "2026-07-20", "title": "Weekly leadership", "client": "Internal", "minutes": 45, "attendees": 4}, {"date": "2026-07-21", "title": "Weekly leadership", "client": "Internal", "minutes": 60, "attendees": 4}, {"date": "2026-07-22", "title": "Beta brand review", "client": "Beta Studio", "minutes": 60, "attendees": 5}, {"date": "2026-07-23", "title": "Nova discovery workshop", "client": "Nova Health", "minutes": 30, "attendees": 6}, {"date": "2026-07-24", "title": "Internal standup", "client": "Internal", "minutes": 50, "attendees": 6}, {"date": "2026-07-28", "title": "Acme scope sync", "client": "Acme Corp", "minutes": 60, "attendees": 4}], "meeting_count": 15, "budget_alerts": [], "identity_cards": [{"title": "Deep Work Resident", "blurb": "147h outside meetings. You protected focus blocks."}, {"title": "Consistency Machine", "blurb": "25 active days in the window. Showed up on repeat."}, {"title": "Billable Beast", "blurb": "83% billable mix. Finance will send a thank-you note."}], "headline": "157h across 25 days", "one_liner": "Your last 30 days: 157.2h tracked, led by Acme Corp · website redesign, 7% meetings.", "shoutouts": ["Busiest day: 2026-07-06 · 8.6h", "Top activity: Logo exploration round 2 · 17h", "Home app: Linear"], "warnings": []}</script>
 <script>
 (function () {
@@ -193,73 +411,70 @@
     if (h >= 1) return (Math.round(h * 10) / 10) + 'h';
     return m + 'm';
   };
+  const esc = (s) => String(s).replace(/[&<>"']/g, (ch) => ({
+    '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+  }[ch]));
 
-  $('headline').textContent = stats.headline || (stats.total_hours + 'h this month');
+  $('headline').textContent = stats.headline || ((stats.total_hours || 0) + 'h this month');
   $('oneliner').textContent = stats.one_liner || '';
   $('window').textContent = (stats.window_start || '') + ' → ' + (stats.window_end || '');
   $('source').textContent = 'source: ' + (stats.source || 'unknown') + (stats.user ? ' · ' + stats.user : '');
 
   const metrics = [
-    ['Total', stats.total_hours + 'h'],
+    ['Total', (stats.total_hours ?? '—') + 'h'],
     ['Active days', String(stats.active_days ?? '—')],
     ['Billable', (stats.billable_pct ?? 0) + '%'],
     ['Meetings', (stats.meeting_pct ?? 0) + '%'],
   ];
   $('metrics').innerHTML = metrics.map(([label, value]) =>
-    `<div class="metric"><div class="label">${label}</div><div class="value">${value}</div></div>`
+    `<div class="metric"><div class="label">${esc(label)}</div><div class="value">${esc(value)}</div></div>`
   ).join('');
 
   const projects = stats.top_projects || [];
-  $('projects').innerHTML = projects.slice(0, 6).map(p => `
+  $('projects').innerHTML = projects.slice(0, 6).map((p) => `
     <div class="row">
       <div>
-        <div class="name">${escapeHtml(p.name)}</div>
-        <div class="meta">${escapeHtml(p.client || '')}${p.budget_used_pct != null ? ' · budget ' + p.budget_used_pct + '%' : ''}</div>
+        <div class="name">${esc(p.name)}</div>
+        <div class="meta">${esc(p.client || '')}${p.budget_used_pct != null ? ' · ' + p.budget_used_pct + '% of budget' : ''}</div>
         <div class="track"><div class="fill" style="width:${Math.min(100, p.share_pct || 0)}%"></div></div>
       </div>
-      <div class="hours">${p.hours}h</div>
+      <div class="hours">${esc(String(p.hours))}h</div>
     </div>
-  `).join('') || '<div class="meta">No project rows in this window.</div>';
+  `).join('') || '<div class="empty">No project rows in this window.</div>';
 
   const cards = stats.identity_cards || [];
-  $('identity').innerHTML = cards.map(c => `
-    <div class="idcard"><strong>${escapeHtml(c.title)}</strong><span>${escapeHtml(c.blurb)}</span></div>
-  `).join('') || '<div class="meta">No identity cards.</div>';
+  $('identity').innerHTML = cards.map((c) => `
+    <div class="idcard"><strong>${esc(c.title)}</strong><span>${esc(c.blurb)}</span></div>
+  `).join('') || '<div class="empty">No identity cards.</div>';
 
   const acts = stats.top_activities || [];
-  $('activities').innerHTML = acts.slice(0, 8).map(a => `
+  $('activities').innerHTML = acts.slice(0, 8).map((a) => `
     <div class="row">
       <div>
-        <div class="name">${escapeHtml(a.title)}</div>
-        <div class="meta">${escapeHtml(a.project || '')}</div>
+        <div class="name">${esc(a.title)}</div>
+        <div class="meta">${esc(a.project || '')}</div>
       </div>
-      <div class="hours">${fmtH(a.minutes || 0)}</div>
+      <div class="hours">${esc(fmtH(a.minutes || 0))}</div>
     </div>
-  `).join('') || '<div class="meta">No activities.</div>';
+  `).join('') || '<div class="empty">No activities.</div>';
 
   const series = stats.daily_series || [];
-  const maxM = Math.max(1, ...series.map(d => d.minutes || 0));
-  $('chart').innerHTML = series.map(d => {
-    const h = Math.max(4, Math.round(((d.minutes || 0) / maxM) * 112));
+  const maxM = Math.max(1, ...series.map((d) => d.minutes || 0));
+  $('chart').innerHTML = series.map((d) => {
+    const h = Math.max(4, Math.round(((d.minutes || 0) / maxM) * 120));
     const z = (d.minutes || 0) === 0 ? ' zero' : '';
-    return `<div class="bar${z}" style="height:${h}px" title="${d.date}: ${fmtH(d.minutes || 0)}"></div>`;
+    return `<div class="bar${z}" style="height:${h}px" title="${esc(d.date)}: ${esc(fmtH(d.minutes || 0))}"></div>`;
   }).join('');
 
   const chips = [];
-  (stats.shoutouts || []).forEach(s => chips.push({t: s, c: ''}));
-  (stats.budget_alerts || []).forEach(b => chips.push({
-    t: `${b.level === 'over' ? 'OVER' : 'NEAR'} ${b.name} · ${b.budget_used_pct}%`,
+  (stats.shoutouts || []).forEach((s) => chips.push({ t: s, c: '' }));
+  (stats.budget_alerts || []).forEach((b) => chips.push({
+    t: `${b.level === 'over' ? 'Over budget' : 'Near budget'} · ${b.name} · ${b.budget_used_pct}%`,
     c: b.level === 'over' ? 'danger' : 'warn'
   }));
-  (stats.top_apps || []).slice(0, 4).forEach(a => chips.push({t: a.name + ' · ' + fmtH(a.minutes), c: ''}));
-  $('chips').innerHTML = chips.map(c => `<span class="chip ${c.c}">${escapeHtml(c.t)}</span>`).join('')
-    || '<span class="chip">No shoutouts yet</span>';
-
-  function escapeHtml(s) {
-    return String(s).replace(/[&<>"']/g, ch => ({
-      '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
-    }[ch]));
-  }
+  (stats.top_apps || []).slice(0, 4).forEach((a) => chips.push({ t: `${a.name} · ${fmtH(a.minutes)}`, c: '' }));
+  $('chips').innerHTML = chips.map((c) => `<span class="chip ${c.c}">${esc(c.t)}</span>`).join('')
+    || '<span class="chip">No notes yet</span>';
 })();
 </script>
 </body>

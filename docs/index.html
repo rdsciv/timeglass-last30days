@@ -4,121 +4,443 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>timeglass-last30days — Work Wrapped</title>
-  <meta name="description" content="Spotify Wrapped for your work. Last 30 days from Timeglass MCP. No scraping." />
+  <meta name="description" content="Work Wrapped for your real month. Last 30 days from Timeglass MCP. No scraping." />
   <meta property="og:title" content="timeglass-last30days — Work Wrapped" />
-  <meta property="og:description" content="Your timesheet already knows. Now your agent can wrap it." />
-  <meta property="og:image" content="hero.svg" />
+  <meta property="og:description" content="The inverse of /last30days: what you actually did at work." />
+  <meta property="og:image" content="pr/work-wrapped-demo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet" />
   <style>
-    :root {
-      --bg: #07080c; --text: #f4f1ea; --muted: #9aa3b5; --accent: #7c5cff; --accent2: #3de0c5;
-      --card: #141826; --line: rgba(255,255,255,.08);
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0; font-family: "DM Sans", system-ui, sans-serif; color: var(--text);
-      background:
-        radial-gradient(1000px 500px at 15% -10%, rgba(124,92,255,.28), transparent 55%),
-        radial-gradient(800px 420px at 90% 0%, rgba(61,224,197,.16), transparent 50%),
-        var(--bg);
-      min-height: 100vh;
-    }
-    .wrap { max-width: 920px; margin: 0 auto; padding: 48px 20px 80px; }
-    .nav { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 40px; }
-    .logo { display: flex; gap: 12px; align-items: center; font-weight: 700; letter-spacing: -0.03em; }
-    .mark {
-      width: 40px; height: 40px; border-radius: 12px;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      display: grid; place-items: center; font-size: .85rem;
-    }
-    .links a {
-      color: var(--muted); text-decoration: none; margin-left: 16px; font-size: .95rem;
-    }
-    .links a:hover { color: var(--text); }
-    h1 {
-      font-size: clamp(2.4rem, 6vw, 4rem); line-height: 1.05; letter-spacing: -0.045em;
-      margin: 0 0 16px; max-width: 12ch;
-    }
-    .lead { font-size: 1.2rem; color: var(--muted); max-width: 38ch; margin: 0 0 28px; }
-    .cta { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 36px; }
-    .btn {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 14px 18px; border-radius: 999px; font-weight: 600; text-decoration: none;
-      border: 1px solid var(--line);
-    }
-    .btn.primary { background: linear-gradient(135deg, var(--accent), #5b8cff); color: white; border: none; }
-    .btn.ghost { color: var(--text); background: rgba(255,255,255,.03); }
-    .hero {
-      width: 100%; border-radius: 24px; border: 1px solid var(--line);
-      box-shadow: 0 24px 80px rgba(0,0,0,.45); margin: 12px 0 40px;
-    }
-    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 40px; }
-    @media (max-width: 720px) { .grid { grid-template-columns: 1fr; } }
-    .card {
-      background: linear-gradient(180deg, var(--card), #1a1f30);
-      border: 1px solid var(--line); border-radius: 20px; padding: 18px;
-    }
-    .card h3 { margin: 0 0 8px; font-size: 1rem; }
-    .card p { margin: 0; color: var(--muted); font-size: .92rem; line-height: 1.45; }
-    pre {
-      background: #0e1018; border: 1px solid var(--line); border-radius: 16px;
-      padding: 18px; overflow: auto; font-family: "IBM Plex Mono", monospace; font-size: .85rem;
-      color: #d7dde8; line-height: 1.55;
-    }
-    .foot { margin-top: 48px; color: var(--muted); font-size: .9rem; }
-    a { color: var(--accent2); }
+  /* Hallmark · studied-DNA (source: timeglass.ai product marketing)
+   * Macrostructure: statement hero + product proof + quiet payoff
+   * Nav: N1a minimal · Footer: product-site quiet
+   */
+  :root {
+    --paper: #f7f4ee;
+    --paper-2: #efeae0;
+    --ink: #14201a;
+    --ink-soft: #3d4a43;
+    --muted: #6b756f;
+    --line: #ddd6c8;
+    --forest: #1a2c24;
+    --forest-2: #243830;
+    --teal: #1f8a7a;
+    --teal-deep: #17695c;
+    --amber: #c9852a;
+    --white: #ffffff;
+    --shadow: 0 24px 60px rgba(20, 32, 26, 0.12);
+    --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+    --font-display: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+  }
+  a { color: inherit; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 22px; }
+
+  /* Nav */
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 22px 0;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+  }
+  .mark {
+    width: 32px;
+    height: 32px;
+    border-radius: 9px;
+    background: var(--forest);
+    color: var(--paper);
+    display: grid;
+    place-items: center;
+    font-size: 0.72rem;
+    font-weight: 700;
+  }
+  .nav-links {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: var(--ink-soft);
+    font-size: 0.92rem;
+    font-weight: 500;
+  }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-links .btn-sm {
+    background: var(--forest);
+    color: var(--paper);
+    padding: 10px 14px;
+    border-radius: 999px;
+    font-size: 0.88rem;
+  }
+  .nav-links .btn-sm:hover { background: var(--forest-2); color: var(--paper); }
+
+  /* Hero */
+  .hero {
+    padding: 48px 0 28px;
+    max-width: 760px;
+  }
+  .hero h1 {
+    margin: 0 0 18px;
+    font-family: var(--font-display);
+    font-style: normal;
+    font-weight: 600;
+    font-size: clamp(2.6rem, 6.2vw, 4.2rem);
+    line-height: 1.02;
+    letter-spacing: -0.035em;
+    overflow-wrap: anywhere;
+    max-width: 11ch;
+  }
+  .hero .lede {
+    margin: 0 0 28px;
+    font-size: 1.15rem;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    max-width: 40ch;
+  }
+  .cta {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 46px;
+    padding: 0 18px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    border: 1px solid transparent;
+  }
+  .btn-primary {
+    background: var(--forest);
+    color: var(--paper);
+  }
+  .btn-primary:hover { background: var(--forest-2); }
+  .btn-secondary {
+    background: transparent;
+    color: var(--ink);
+    border-color: var(--line);
+  }
+  .btn-secondary:hover { background: var(--paper-2); }
+
+  /* Demo frame — product surface, not fake browser chrome */
+  .demo-frame {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    margin: 8px 0 56px;
+  }
+  .demo-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+  }
+  .demo-caption {
+    padding: 14px 18px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    font-size: 0.86rem;
+    color: var(--muted);
+    background: #fbfaf7;
+  }
+  .demo-caption a {
+    color: var(--teal-deep);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .demo-caption a:hover { text-decoration: underline; }
+
+  /* Sections */
+  section.band {
+    padding: 28px 0 8px;
+  }
+  .section-title {
+    margin: 0 0 10px;
+    font-family: var(--font-display);
+    font-style: normal;
+    font-weight: 600;
+    font-size: clamp(1.7rem, 3.4vw, 2.25rem);
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    max-width: 16ch;
+  }
+  .section-lede {
+    margin: 0 0 22px;
+    color: var(--ink-soft);
+    max-width: 48ch;
+    line-height: 1.55;
+    font-size: 1.02rem;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+  @media (max-width: 800px) {
+    .cards { grid-template-columns: 1fr; }
+  }
+  .card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 20px 18px;
+  }
+  .card h3 {
+    margin: 0 0 8px;
+    font-size: 1rem;
+    letter-spacing: -0.015em;
+  }
+  .card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.94rem;
+    line-height: 1.5;
+  }
+
+  /* Dark payoff band — Timeglass marketing */
+  .payoff {
+    background: var(--forest);
+    color: #f7f4ee;
+    border-radius: 24px;
+    padding: 36px 28px;
+    margin: 20px 0 48px;
+  }
+  .payoff h2 {
+    margin: 0 0 10px;
+    font-family: var(--font-display);
+    font-style: normal;
+    font-weight: 600;
+    font-size: clamp(1.7rem, 3vw, 2.2rem);
+    letter-spacing: -0.03em;
+    max-width: 14ch;
+  }
+  .payoff > p {
+    margin: 0 0 22px;
+    color: rgba(247, 244, 238, 0.72);
+    max-width: 48ch;
+    line-height: 1.5;
+  }
+  .payoff-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+  }
+  @media (max-width: 800px) {
+    .payoff-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 480px) {
+    .payoff-grid { grid-template-columns: 1fr; }
+  }
+  .payoff-item {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 14px;
+    padding: 16px 14px;
+  }
+  .payoff-item strong {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+  }
+  .payoff-item span {
+    color: rgba(247, 244, 238, 0.62);
+    font-size: 0.86rem;
+    line-height: 1.4;
+  }
+
+  /* Install */
+  .install {
+    margin-bottom: 56px;
+  }
+  pre {
+    margin: 0;
+    background: var(--forest);
+    color: #e8efe9;
+    border-radius: 16px;
+    padding: 20px 18px;
+    overflow: auto;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.84rem;
+    line-height: 1.55;
+  }
+
+  /* Final CTA */
+  .final {
+    text-align: center;
+    padding: 20px 0 64px;
+  }
+  .final h2 {
+    margin: 0 0 10px;
+    font-family: var(--font-display);
+    font-style: normal;
+    font-weight: 600;
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+    letter-spacing: -0.03em;
+  }
+  .final p {
+    margin: 0 0 22px;
+    color: var(--muted);
+  }
+  .final .cta { justify-content: center; }
+
+  footer.site {
+    border-top: 1px solid var(--line);
+    padding: 22px 0 36px;
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    flex-wrap: wrap;
+    color: var(--muted);
+    font-size: 0.86rem;
+  }
+  footer.site a {
+    color: var(--teal-deep);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  footer.site a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <div class="nav">
-      <div class="logo"><div class="mark">TG</div>timeglass-last30days</div>
-      <div class="links">
+    <nav class="nav" aria-label="Primary">
+      <a class="logo" href="./">
+        <span class="mark" aria-hidden="true">TG</span>
+        timeglass-last30days
+      </a>
+      <div class="nav-links">
         <a href="https://github.com/rdsciv/timeglass-last30days">GitHub</a>
         <a href="demo.html">Live demo</a>
         <a href="https://timeglass.ai">Timeglass</a>
+        <a class="btn-sm" href="https://github.com/rdsciv/timeglass-last30days#install">Install</a>
       </div>
-    </div>
+    </nav>
 
-    <h1>Work Wrapped for your real month</h1>
-    <p class="lead">
-      The viral energy of <code>/last30days</code>, pointed at <strong>your</strong> work —
-      via Timeglass MCP. No scraping. No CSV archaeology.
-    </p>
-    <div class="cta">
-      <a class="btn primary" href="demo.html">Open demo Wrapped →</a>
-      <a class="btn ghost" href="https://github.com/rdsciv/timeglass-last30days#install">Install the skill</a>
-    </div>
-
-    <img class="hero" src="hero.svg" alt="Work Wrapped hero" />
-
-    <div class="grid">
-      <div class="card">
-        <h3>MCP-native</h3>
-        <p>Pulls projects, meetings, activities, and budgets from the official Timeglass MCP. Wrong-audience desktop tokens are diagnosed, not looped forever.</p>
+    <header class="hero">
+      <h1>Work Wrapped for your real month.</h1>
+      <p class="lede">
+        The inverse of <code>/last30days</code>: not what the internet said —
+        what <strong>you</strong> did. Pulled from Timeglass over MCP. No scraping.
+      </p>
+      <div class="cta">
+        <a class="btn btn-primary" href="demo.html">Open demo Wrapped</a>
+        <a class="btn btn-secondary" href="https://github.com/rdsciv/timeglass-last30days#install">Install the skill</a>
       </div>
-      <div class="card">
-        <h3>Agent skill</h3>
-        <p>Ships with SKILL.md + Claude/Codex/Grok plugin manifests. One install path across Agent Skills hosts.</p>
-      </div>
-      <div class="card">
-        <h3>Shareable HTML</h3>
-        <p>Self-contained Work Wrapped page you can open locally or host. Stdlib Python engine — zero pip install.</p>
-      </div>
-    </div>
+    </header>
 
-    <h2 style="letter-spacing:-0.03em;">30-second demo</h2>
-    <pre>git clone https://github.com/rdsciv/timeglass-last30days.git
+    <figure class="demo-frame">
+      <img src="pr/work-wrapped-demo.png" alt="Work Wrapped demo showing 157 hours across 25 days" width="1280" height="1600" />
+      <figcaption class="demo-caption">
+        <span>Synthetic demo month · fixture data</span>
+        <a href="demo.html">Open interactive demo →</a>
+      </figcaption>
+    </figure>
+
+    <section class="band" aria-labelledby="why-title">
+      <h2 class="section-title" id="why-title">Know where the month actually went.</h2>
+      <p class="section-lede">
+        Timeglass already captures the work as it happens. This skill turns the last 30 days
+        into a monthly ritual your agent can run — and a page you can share.
+      </p>
+      <div class="cards">
+        <article class="card">
+          <h3>MCP-native</h3>
+          <p>Projects, meetings, activities, budgets from the official Timeglass MCP. Desktop upload tokens are diagnosed, not looped forever.</p>
+        </article>
+        <article class="card">
+          <h3>Agent skill</h3>
+          <p>SKILL.md plus Claude, Codex, and Grok plugin manifests. One install path across Agent Skills hosts.</p>
+        </article>
+        <article class="card">
+          <h3>Shareable HTML</h3>
+          <p>Self-contained Work Wrapped. Stdlib Python engine — zero pip install. Demo runs offline.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="payoff" aria-labelledby="payoff-title">
+      <h2 id="payoff-title">What it all adds up to.</h2>
+      <p>When the record already exists, the review stops being archaeology.</p>
+      <div class="payoff-grid">
+        <div class="payoff-item">
+          <strong>Hours &amp; rhythm</strong>
+          <span>Total time, active days, weekday shape, busiest day.</span>
+        </div>
+        <div class="payoff-item">
+          <strong>Projects &amp; clients</strong>
+          <span>Where billable time concentrated — and what got crowded out.</span>
+        </div>
+        <div class="payoff-item">
+          <strong>Meetings vs deep work</strong>
+          <span>See the split before you plan the next month the same way.</span>
+        </div>
+        <div class="payoff-item">
+          <strong>Budget honesty</strong>
+          <span>NEAR / OVER flags when the work record includes targets.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="install" aria-labelledby="install-title">
+      <h2 class="section-title" id="install-title">Try it in thirty seconds.</h2>
+      <p class="section-lede">No Timeglass account required for the demo path.</p>
+      <pre>git clone https://github.com/rdsciv/timeglass-last30days.git
 cd timeglass-last30days
 python3 skills/timeglass-last30days/scripts/last30work.py --demo --emit all --out ./out
 open out/work-wrapped.html</pre>
+    </section>
 
-    <p class="foot">
-      MIT · Built to help <a href="https://timeglass.ai">timeglass.ai</a> show what AI-era timesheets unlock ·
-      <a href="https://github.com/rdsciv/timeglass-last30days">Star the repo</a>
-    </p>
+    <section class="final">
+      <h2>Your timesheet already knows.</h2>
+      <p>Now your agent can wrap it — and Timeglass can capture the next month.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="https://timeglass.ai">Get started on Timeglass</a>
+        <a class="btn btn-secondary" href="https://github.com/rdsciv/timeglass-last30days">Star the repo</a>
+      </div>
+    </section>
+
+    <footer class="site">
+      <div>MIT · Built to show what AI-era timesheets unlock</div>
+      <div>
+        <a href="https://timeglass.ai">timeglass.ai</a>
+        ·
+        <a href="https://github.com/rdsciv/timeglass-last30days">GitHub</a>
+      </div>
+    </footer>
   </div>
 </body>
 </html>
