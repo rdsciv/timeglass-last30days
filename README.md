@@ -1,8 +1,8 @@
-# /timeglass-last30days
+# /my-last-30-wrapped
 
 <p align="center">
   <a href="https://rdsciv.github.io/timeglass-last30days/demo.html">
-    <img src="media/pr-assets/work-wrapped-demo.png" alt="Work Wrapped demo — 157h across 25 days from Timeglass MCP" width="920" />
+    <img src="media/pr-assets/work-wrapped-demo.png" alt="/my-last-30-wrapped demo — Work Wrapped from Timeglass MCP" width="920" />
   </a>
 </p>
 
@@ -17,7 +17,7 @@
 **Spotify Wrapped, but for your actual work.**
 
 `/last30days` told you what the internet said about a topic.  
-**`/timeglass-last30days` tells you what *you* did** — from the [Timeglass](https://timeglass.ai) work record over MCP.
+**`/my-last-30-wrapped`** tells you what *you* did — from the [Timeglass](https://timeglass.ai) work record over MCP.
 
 No timers to reconstruct. No CSV exports. No scraping Reddit.  
 Your agent pulls the last 30 days from Timeglass and hands you a **Work Wrapped**.
