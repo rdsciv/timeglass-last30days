@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=1920, height=1080" />
-    <title>/my-last-30-wrapped — dashboard motion</title>
+    <title>/my-last-30-wrapped — full dashboard motion</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,9 +14,9 @@
     <style>
       :root {
         --cream: #faf6f0;
-        --crimson: #b01030;
-        --crimson-deep: #6e091e;
         --ink: #1c1412;
+        --tg-ink: #0b1a1c;
+        --tg-cream: #faf8f4;
       }
       * { box-sizing: border-box; }
       body {
@@ -37,91 +37,86 @@
         inset: 0;
         overflow: hidden;
       }
-      .bg-fill {
+      .fill-cream {
         position: absolute;
         inset: 0;
         background: var(--cream);
       }
-      .bg-crimson {
+      .fill-tg {
         position: absolute;
         inset: 0;
-        background: var(--crimson-deep);
+        background: var(--tg-ink);
       }
-      .frame-wrap {
+
+      /* Full dashboard scroll — no cover-crop */
+      .dash-stage {
         position: absolute;
-        inset: 72px 96px 120px;
-        border-radius: 28px;
+        inset: 0;
         overflow: hidden;
-        box-shadow: 0 30px 80px rgba(28, 20, 18, 0.18);
-        background: #fff;
+        background: var(--cream);
       }
-      .frame-wrap img {
+      .dash-scroll {
         position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: top center;
-        display: block;
+        left: 0;
+        top: 0;
+        width: 1920px;
+        /* full-dashboard.png is 1920×3600 */
+        height: 3600px;
+        will-change: transform;
       }
-      .topbar {
+      .dash-scroll img {
+        display: block;
+        width: 1920px;
+        height: 3600px;
+        max-width: none;
+        object-fit: fill;
+      }
+      .dash-vignette {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 72px;
+        z-index: 3;
+        pointer-events: none;
+      }
+      .dash-vignette.top {
+        top: 0;
+        background: linear-gradient(to bottom, rgba(250, 246, 240, 0.95), rgba(250, 246, 240, 0));
+      }
+      .dash-vignette.bottom {
+        bottom: 0;
+        background: linear-gradient(to top, rgba(250, 246, 240, 0.95), rgba(250, 246, 240, 0));
+      }
+      .dash-badge {
         position: absolute;
         top: 28px;
-        left: 96px;
-        right: 96px;
-        display: flex;
-        justify-content: space-between;
+        left: 40px;
+        z-index: 4;
+        display: inline-flex;
         align-items: center;
-        z-index: 5;
-      }
-      .brand {
-        display: flex;
-        align-items: center;
-        gap: 14px;
+        gap: 12px;
         font-family: Ubuntu, system-ui, sans-serif;
         font-weight: 700;
-        font-size: 28px;
+        font-size: 24px;
         letter-spacing: -0.02em;
-      }
-      .mark {
-        width: 44px;
-        height: 44px;
-        border-radius: 12px;
-        background: var(--crimson);
-        color: var(--cream);
-        display: grid;
-        place-items: center;
-        font-size: 16px;
-      }
-      .pill {
-        font-size: 18px;
-        font-weight: 600;
-        color: #4a3834;
-        background: #fff;
+        color: var(--ink);
+        background: rgba(250, 246, 240, 0.92);
         border: 1px solid #e5d9cc;
         border-radius: 999px;
-        padding: 10px 18px;
+        padding: 10px 18px 10px 12px;
       }
-      .label {
-        position: absolute;
-        left: 96px;
-        bottom: 36px;
-        font-family: Ubuntu, system-ui, sans-serif;
-        font-weight: 700;
-        font-size: 34px;
-        letter-spacing: -0.03em;
-        color: var(--ink);
-        z-index: 5;
+      .dash-badge .mark {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        background: #b01030;
+        color: #faf6f0;
+        display: grid;
+        place-items: center;
+        font-size: 14px;
       }
-      .label span {
-        display: block;
-        margin-top: 6px;
-        font-family: "Source Sans 3", system-ui, sans-serif;
-        font-weight: 600;
-        font-size: 20px;
-        color: #7a6862;
-      }
-      /* Title scene */
+
+      /* Title */
       .title-inner {
         position: absolute;
         inset: 0;
@@ -130,56 +125,57 @@
         text-align: center;
         padding: 80px;
       }
+      .title-inner .slash {
+        margin: 0 0 20px;
+        font-family: Ubuntu, system-ui, sans-serif;
+        font-weight: 700;
+        font-size: 28px;
+        color: #b01030;
+        letter-spacing: -0.02em;
+      }
       .title-inner h1 {
         margin: 0;
         font-family: Ubuntu, system-ui, sans-serif;
         font-weight: 700;
-        font-size: 96px;
+        font-size: 88px;
         line-height: 1.02;
         letter-spacing: -0.04em;
-        color: var(--cream);
+        color: var(--ink);
         max-width: 12ch;
       }
-      .title-inner .slash {
-        margin: 0 0 22px;
-        font-family: Ubuntu, system-ui, sans-serif;
-        font-weight: 700;
-        font-size: 28px;
-        color: #ffb3c0;
-        letter-spacing: -0.02em;
-      }
       .title-inner p {
-        margin: 24px 0 0;
+        margin: 22px 0 0;
         font-size: 28px;
-        color: rgba(255, 249, 242, 0.75);
-        max-width: 28ch;
+        color: #4a3834;
+        max-width: 30ch;
       }
       .stat-row {
-        margin-top: 40px;
+        margin-top: 36px;
         display: flex;
-        gap: 16px;
+        gap: 14px;
         justify-content: center;
       }
       .stat {
-        min-width: 160px;
-        padding: 18px 20px;
+        min-width: 150px;
+        padding: 16px 18px;
         border-radius: 16px;
-        background: rgba(255, 255, 255, 0.08);
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        color: var(--cream);
+        background: #fff;
+        border: 1px solid #e5d9cc;
+        color: var(--ink);
       }
       .stat b {
         display: block;
         font-family: Ubuntu, system-ui, sans-serif;
-        font-size: 36px;
+        font-size: 34px;
         letter-spacing: -0.03em;
       }
       .stat i {
         font-style: normal;
-        font-size: 16px;
-        opacity: 0.7;
+        font-size: 15px;
+        color: #7a6862;
       }
-      /* End CTA */
+
+      /* CTA — Timeglass brand */
       .cta-inner {
         position: absolute;
         inset: 0;
@@ -188,34 +184,60 @@
         text-align: center;
         padding: 80px;
       }
+      .cta-brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        margin: 0 0 20px;
+        color: var(--tg-cream);
+        font-family: Ubuntu, system-ui, sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+      }
+      .cta-brand img {
+        width: 40px;
+        height: 40px;
+        display: block;
+      }
       .cta-inner h2 {
         margin: 0;
         font-family: Ubuntu, system-ui, sans-serif;
         font-weight: 700;
-        font-size: 72px;
+        font-size: 68px;
         line-height: 1.08;
         letter-spacing: -0.03em;
-        color: var(--cream);
-        max-width: 14ch;
+        color: var(--tg-cream);
+        max-width: 16ch;
       }
       .cta-inner p {
-        margin: 20px 0 0;
+        margin: 18px 0 0;
         font-size: 26px;
-        color: rgba(255, 249, 242, 0.72);
+        color: rgba(250, 248, 244, 0.72);
       }
       .cta-btn {
-        margin-top: 32px;
+        margin-top: 28px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
         min-height: 64px;
-        padding: 0 36px;
+        padding: 0 34px;
         border-radius: 999px;
-        background: var(--cream);
-        color: var(--crimson-deep);
+        background: var(--tg-cream);
+        color: var(--tg-ink);
         font-family: Ubuntu, system-ui, sans-serif;
         font-weight: 700;
         font-size: 24px;
+      }
+      .cta-url {
+        margin-top: 14px;
+        font-family: Ubuntu, system-ui, sans-serif;
+        font-size: 18px;
+        color: rgba(250, 248, 244, 0.65);
+      }
+      .cta-fine {
+        margin-top: 10px;
+        font-size: 18px;
+        color: rgba(250, 248, 244, 0.55);
       }
     </style>
   </head>
@@ -228,14 +250,14 @@
       data-height="1080"
       data-duration="18"
     >
-      <!-- 0-3.2 title -->
-      <section id="scene-title" class="clip" data-start="0" data-duration="3.0" data-track-index="1">
-        <div class="bg-crimson"></div>
+      <!-- Title -->
+      <section id="scene-title" class="clip" data-start="0" data-duration="2.8" data-track-index="1">
+        <div class="fill-cream"></div>
         <div class="title-inner">
           <div>
             <p id="t-slash" class="slash">/my-last-30-wrapped</p>
             <h1 id="t-h1">Work Wrapped for your real month</h1>
-            <p id="t-sub">From Timeglass MCP · no scraping · last 30 days</p>
+            <p id="t-sub">Full dashboard from Timeglass MCP · no scraping</p>
             <div class="stat-row" id="t-stats">
               <div class="stat"><b>157h</b><i>total</i></div>
               <div class="stat"><b>25</b><i>active days</i></div>
@@ -246,72 +268,41 @@
         </div>
       </section>
 
-      <!-- 3.0-6.4 hero dashboard -->
-      <section id="scene-hero" class="clip" data-start="3.0" data-duration="3.0" data-track-index="2">
-        <div class="bg-fill"></div>
-        <div class="topbar">
-          <div class="brand"><div class="mark">30</div>/my-last-30-wrapped</div>
-          <div class="pill">Monthly review</div>
+      <!-- Full dashboard scroll — entire page visible over time -->
+      <section id="scene-dash" class="clip" data-start="2.6" data-duration="12.6" data-track-index="2">
+        <div class="dash-stage">
+          <div class="dash-scroll" id="dash-scroll" data-layout-allow-overflow>
+            <img
+              src="public/full-dashboard.png"
+              alt="Full Work Wrapped dashboard"
+              width="1920"
+              height="3600"
+              data-layout-allow-overflow
+            />
+          </div>
+          <div class="dash-vignette top"></div>
+          <div class="dash-vignette bottom"></div>
+          <div class="dash-badge" id="dash-badge">
+            <div class="mark">30</div>
+            /my-last-30-wrapped
+          </div>
         </div>
-        <div class="frame-wrap" id="hero-frame">
-          <img src="public/hero.png" alt="" data-layout-allow-overflow />
-        </div>
-        <div class="label" id="hero-label">Headline numbers<span>157 hours across 25 days</span></div>
       </section>
 
-      <!-- 6.2-9.4 projects -->
-      <section id="scene-projects" class="clip" data-start="6.0" data-duration="3.0" data-track-index="3">
-        <div class="bg-fill"></div>
-        <div class="topbar">
-          <div class="brand"><div class="mark">30</div>/my-last-30-wrapped</div>
-          <div class="pill">Projects</div>
-        </div>
-        <div class="frame-wrap" id="proj-frame">
-          <img src="public/projects.png" alt="" data-layout-allow-overflow />
-        </div>
-        <div class="label" id="proj-label">Where the month went<span>Acme · Beta · Internal · Nova</span></div>
-      </section>
-
-      <!-- 9.2-12.2 rhythm -->
-      <section id="scene-rhythm" class="clip" data-start="9.0" data-duration="3.0" data-track-index="4">
-        <div class="bg-fill"></div>
-        <div class="topbar">
-          <div class="brand"><div class="mark">30</div>/my-last-30-wrapped</div>
-          <div class="pill">Rhythm</div>
-        </div>
-        <div class="frame-wrap" id="rhythm-frame">
-          <img src="public/rhythm.png" alt="" data-layout-allow-overflow />
-        </div>
-        <div class="label" id="rhythm-label">Daily rhythm<span>Deep work pattern across the window</span></div>
-      </section>
-
-      <!-- 12.0-15.0 activities -->
-      <section id="scene-acts" class="clip" data-start="12.0" data-duration="3.0" data-track-index="5">
-        <div class="bg-fill"></div>
-        <div class="topbar">
-          <div class="brand"><div class="mark">30</div>/my-last-30-wrapped</div>
-          <div class="pill">Activities</div>
-        </div>
-        <div class="frame-wrap" id="acts-frame">
-          <img src="public/activities.png" alt="" data-layout-allow-overflow />
-        </div>
-        <div class="label" id="acts-label">What the work actually was<span>Top activities · apps · shoutouts</span></div>
-      </section>
-
-      <!-- 14.8-18 CTA -->
-      <section id="scene-cta" class="clip" data-start="15.0" data-duration="3.0" data-track-index="6">
-        <div class="bg-crimson" style="background:#0B1A1C"></div>
+      <!-- Timeglass CTA -->
+      <section id="scene-cta" class="clip" data-start="15.0" data-duration="3.0" data-track-index="3">
+        <div class="fill-tg"></div>
         <div class="cta-inner">
           <div>
-            <div id="c-slash" style="display:inline-flex;align-items:center;gap:12px;margin:0 0 18px;color:#FAF8F4;font-family:Ubuntu,system-ui,sans-serif;font-weight:700;font-size:22px">
-              <img src="public/brand/logo-on-dark.svg" width="36" height="36" alt="Timeglass" />
+            <div id="c-brand" class="cta-brand">
+              <img src="public/brand/logo-on-dark.svg" width="40" height="40" alt="Timeglass" />
               <span>Timeglass</span>
             </div>
             <h2 id="c-h2">Free forever for the first person at your company.</h2>
             <p id="c-p">Click here to sign up. No credit card required.</p>
-            <div id="c-btn" class="cta-btn" style="background:#FAF8F4;color:#0B1A1C">Click here to sign up</div>
-            <p id="c-url" style="margin-top:14px;font-size:18px;color:rgba(250,248,244,0.65);font-family:Ubuntu,system-ui,sans-serif">https://app.timeglass.ai/sign-up</p>
-            <p id="c-fine" style="margin-top:10px;font-size:18px;color:rgba(250,248,244,0.55)">For the first person at your company · free forever · no credit card required</p>
+            <div id="c-btn" class="cta-btn">Click here to sign up</div>
+            <p id="c-url" class="cta-url">https://app.timeglass.ai/sign-up</p>
+            <p id="c-fine" class="cta-fine">For the first person at your company · free forever · no credit card required</p>
           </div>
         </div>
       </section>
@@ -322,36 +313,27 @@
       const tl = gsap.timeline({ paused: true });
 
       // Title
-      tl.from("#t-slash", { y: 24, opacity: 0, duration: 0.45, ease: "power3.out" }, 0.15);
-      tl.from("#t-h1", { y: 40, opacity: 0, duration: 0.55, ease: "power3.out" }, 0.28);
-      tl.from("#t-sub", { y: 20, opacity: 0, duration: 0.4, ease: "power2.out" }, 0.5);
-      tl.from("#t-stats .stat", { y: 28, opacity: 0, duration: 0.4, stagger: 0.08, ease: "power3.out" }, 0.7);
+      tl.from("#t-slash", { y: 20, opacity: 0, duration: 0.4, ease: "power3.out" }, 0.15);
+      tl.from("#t-h1", { y: 36, opacity: 0, duration: 0.55, ease: "power3.out" }, 0.28);
+      tl.from("#t-sub", { y: 16, opacity: 0, duration: 0.4, ease: "power2.out" }, 0.48);
+      tl.from("#t-stats .stat", { y: 24, opacity: 0, duration: 0.4, stagger: 0.07, ease: "power3.out" }, 0.65);
 
-      // Hero dash
-      tl.from("#hero-frame", { scale: 1.06, opacity: 0, duration: 0.7, ease: "power3.out" }, 3.05);
-      tl.from("#hero-label", { y: 18, opacity: 0, duration: 0.4, ease: "power2.out" }, 3.25);
-      tl.to("#hero-frame img", { scale: 1.04, duration: 3.0, ease: "none" }, 3.1);
+      // Full dashboard: scroll entire page into view (3600 - 1080 = 2520px)
+      // Start fully showing the top of the dashboard, end fully showing the bottom CTA of the page
+      tl.fromTo(
+        "#dash-scroll",
+        { y: 0 },
+        { y: -2520, duration: 11.8, ease: "none" },
+        2.7
+      );
+      tl.from("#dash-badge", { y: -12, opacity: 0, duration: 0.35, ease: "power2.out" }, 2.75);
 
-      // Projects
-      tl.from("#proj-frame", { x: 80, opacity: 0, duration: 0.65, ease: "power3.out" }, 6.05);
-      tl.from("#proj-label", { y: 18, opacity: 0, duration: 0.4, ease: "power2.out" }, 6.2);
-      tl.to("#proj-frame img", { scale: 1.03, duration: 2.8, ease: "none" }, 6.1);
-
-      // Rhythm
-      tl.from("#rhythm-frame", { y: 60, opacity: 0, duration: 0.65, ease: "power3.out" }, 9.05);
-      tl.from("#rhythm-label", { y: 18, opacity: 0, duration: 0.4, ease: "power2.out" }, 9.2);
-      tl.to("#rhythm-frame img", { scale: 1.04, duration: 2.7, ease: "none" }, 9.1);
-
-      // Activities
-      tl.from("#acts-frame", { x: -70, opacity: 0, duration: 0.65, ease: "power3.out" }, 12.05);
-      tl.from("#acts-label", { y: 18, opacity: 0, duration: 0.4, ease: "power2.out" }, 12.25);
-      tl.to("#acts-frame img", { scale: 1.03, duration: 2.7, ease: "none" }, 12.1);
-
-      // CTA
-      tl.from("#c-slash", { y: 20, opacity: 0, duration: 0.4, ease: "power3.out" }, 15.05);
-      tl.from("#c-h2", { y: 36, opacity: 0, duration: 0.55, ease: "power3.out" }, 15.15);
-      tl.from("#c-p", { y: 18, opacity: 0, duration: 0.4, ease: "power2.out" }, 15.4);
-      tl.from("#c-btn", { scale: 0.92, opacity: 0, duration: 0.45, ease: "back.out(1.4)" }, 15.55);
+      // Timeglass CTA endcard
+      tl.from("#c-brand", { y: 18, opacity: 0, duration: 0.4, ease: "power3.out" }, 15.1);
+      tl.from("#c-h2", { y: 32, opacity: 0, duration: 0.5, ease: "power3.out" }, 15.25);
+      tl.from("#c-p", { y: 16, opacity: 0, duration: 0.35, ease: "power2.out" }, 15.45);
+      tl.from("#c-btn", { scale: 0.94, opacity: 0, duration: 0.4, ease: "back.out(1.4)" }, 15.6);
+      tl.from(["#c-url", "#c-fine"], { y: 10, opacity: 0, duration: 0.35, stagger: 0.06, ease: "power2.out" }, 15.75);
 
       window.__timelines["main"] = tl;
     </script>
