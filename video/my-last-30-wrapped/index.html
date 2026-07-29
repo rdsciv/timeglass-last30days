@@ -17,6 +17,8 @@
         --ink: #1c1412;
         --tg-ink: #0b1a1c;
         --tg-cream: #faf8f4;
+        --dash-h: 4431px;
+        --scroll-y: -3351px;
       }
       * { box-sizing: border-box; }
       body {
@@ -28,7 +30,7 @@
       #root {
         position: relative;
         width: 1920px;
-        height: 4431px;
+        height: 1080px;
         overflow: hidden;
         background: var(--cream);
       }
@@ -48,7 +50,6 @@
         background: var(--tg-ink);
       }
 
-      /* Full dashboard scroll — no cover-crop */
       .dash-stage {
         position: absolute;
         inset: 0;
@@ -60,32 +61,14 @@
         left: 0;
         top: 0;
         width: 1920px;
-        /* full-dashboard.png is 1920×3600 */
-        height: 4431px;
+        height: var(--dash-h);
         will-change: transform;
       }
       .dash-scroll img {
         display: block;
         width: 1920px;
-        height: 4431px;
+        height: var(--dash-h);
         max-width: none;
-        object-fit: fill;
-      }
-      .dash-vignette {
-        position: absolute;
-        left: 0;
-        right: 0;
-        height: 4431px;
-        z-index: 3;
-        pointer-events: none;
-      }
-      .dash-vignette.top {
-        top: 0;
-        background: linear-gradient(to bottom, rgba(250, 246, 240, 0.95), rgba(250, 246, 240, 0));
-      }
-      .dash-vignette.bottom {
-        bottom: 0;
-        background: linear-gradient(to top, rgba(250, 246, 240, 0.95), rgba(250, 246, 240, 0));
       }
       .dash-badge {
         position: absolute;
@@ -100,14 +83,14 @@
         font-size: 24px;
         letter-spacing: -0.02em;
         color: var(--ink);
-        background: rgba(250, 246, 240, 0.92);
+        background: rgba(250, 246, 240, 0.94);
         border: 1px solid #e5d9cc;
         border-radius: 999px;
         padding: 10px 18px 10px 12px;
       }
       .dash-badge .mark {
         width: 36px;
-        height: 4431px;
+        height: 36px;
         border-radius: 10px;
         background: #b01030;
         color: #faf6f0;
@@ -116,7 +99,6 @@
         font-size: 14px;
       }
 
-      /* Title */
       .title-inner {
         position: absolute;
         inset: 0;
@@ -175,7 +157,6 @@
         color: #7a6862;
       }
 
-      /* CTA — Timeglass brand */
       .cta-inner {
         position: absolute;
         inset: 0;
@@ -196,7 +177,7 @@
       }
       .cta-brand img {
         width: 40px;
-        height: 4431px;
+        height: 40px;
         display: block;
       }
       .cta-inner h2 {
@@ -219,7 +200,7 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        min-height: 4431px;
+        min-height: 64px;
         padding: 0 34px;
         border-radius: 999px;
         background: var(--tg-cream);
@@ -247,11 +228,10 @@
       data-composition-id="main"
       data-start="0"
       data-width="1920"
-      data-height="4431"
+      data-height="1080"
       data-duration="18"
     >
-      <!-- Title -->
-      <section id="scene-title" class="clip" data-start="0" data-duration="2.8" data-track-index="1">
+      <section id="scene-title" class="clip" data-start="0" data-duration="2.6" data-track-index="1">
         <div class="fill-cream"></div>
         <div class="title-inner">
           <div>
@@ -268,8 +248,7 @@
         </div>
       </section>
 
-      <!-- Full dashboard scroll — entire page visible over time -->
-      <section id="scene-dash" class="clip" data-start="2.6" data-duration="12.6" data-track-index="2">
+      <section id="scene-dash" class="clip" data-start="2.6" data-duration="12.4" data-track-index="2">
         <div class="dash-stage">
           <div class="dash-scroll" id="dash-scroll" data-layout-allow-overflow>
             <img
@@ -280,8 +259,6 @@
               data-layout-allow-overflow
             />
           </div>
-          <div class="dash-vignette top"></div>
-          <div class="dash-vignette bottom"></div>
           <div class="dash-badge" id="dash-badge">
             <div class="mark">30</div>
             /my-last-30-wrapped
@@ -289,13 +266,12 @@
         </div>
       </section>
 
-      <!-- Timeglass CTA -->
       <section id="scene-cta" class="clip" data-start="15.0" data-duration="3.0" data-track-index="3">
         <div class="fill-tg"></div>
         <div class="cta-inner">
           <div>
             <div id="c-brand" class="cta-brand">
-              <img src="public/brand/logo-on-dark.svg" width="40" height="4431" alt="Timeglass" />
+              <img src="public/brand/logo-on-dark.svg" width="40" height="40" alt="Timeglass" />
               <span>Timeglass</span>
             </div>
             <h2 id="c-h2">Free forever for the first person at your company.</h2>
@@ -312,23 +288,20 @@
       window.__timelines = window.__timelines || {};
       const tl = gsap.timeline({ paused: true });
 
-      // Title
       tl.from("#t-slash", { y: 20, opacity: 0, duration: 0.4, ease: "power3.out" }, 0.15);
       tl.from("#t-h1", { y: 36, opacity: 0, duration: 0.55, ease: "power3.out" }, 0.28);
       tl.from("#t-sub", { y: 16, opacity: 0, duration: 0.4, ease: "power2.out" }, 0.48);
       tl.from("#t-stats .stat", { y: 24, opacity: 0, duration: 0.4, stagger: 0.07, ease: "power3.out" }, 0.65);
 
-      // Full dashboard: scroll entire page into view (3600 - 1080 = 2520px)
-      // Start fully showing the top of the dashboard, end fully showing the bottom CTA of the page
+      // Scroll full dashboard image (4431px tall) through 1080px viewport = 3351px
       tl.fromTo(
         "#dash-scroll",
         { y: 0 },
-        { y: -3351, duration: 11.8, ease: "none" },
+        { y: -3351, duration: 11.6, ease: "none" },
         2.7
       );
-      tl.from("#dash-badge", { y: -3351, opacity: 0, duration: 0.35, ease: "power2.out" }, 2.75);
+      tl.from("#dash-badge", { y: -12, opacity: 0, duration: 0.35, ease: "power2.out" }, 2.75);
 
-      // Timeglass CTA endcard
       tl.from("#c-brand", { y: 18, opacity: 0, duration: 0.4, ease: "power3.out" }, 15.1);
       tl.from("#c-h2", { y: 32, opacity: 0, duration: 0.5, ease: "power3.out" }, 15.25);
       tl.from("#c-p", { y: 16, opacity: 0, duration: 0.35, ease: "power2.out" }, 15.45);
