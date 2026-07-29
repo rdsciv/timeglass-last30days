@@ -131,24 +131,61 @@ def extract_team_ids(raw: str | Any) -> list[dict[str, str]]:
     out: list[dict[str, str]] = []
     seen: set[str] = set()
 
-    def walk(node: Any) -> None:
+    def walk(node: Any, parent_workspace: str = "") -> None:
         if not isinstance(node, dict):
             if isinstance(node, list):
                 for x in node:
-                    walk(x)
+                    walk(x, parent_workspace)
             return
+        wid = sfield(node, ["workspace_id", "workspaceId"]) or parent_workspace
         tid = sfield(node, ["team_id", "teamId"])
         # Never treat workspace_id as team
         if tid and tid not in seen and tid != sfield(node, ["workspace_id", "workspaceId"]):
             seen.add(tid)
-            out.append({"team_id": tid, "name": sfield(node, ["name", "title"], tid)})
+            out.append(
+                {
+                    "team_id": tid,
+                    "name": sfield(node, ["name", "title"], tid),
+                    "workspace_id": wid,
+                }
+            )
         for key in ("children", "team_tree", "teamTree", "teams"):
             if isinstance(node.get(key), list):
                 for c in node[key]:
-                    walk(c)
+                    walk(c, wid)
         if isinstance(node.get("workspaces"), list):
             for ws in node["workspaces"]:
-                walk(ws)
+                walk(ws, sfield(ws, ["workspace_id", "workspaceId"]) or wid)
+        if isinstance(node.get("items"), list):
+            for it in node["items"]:
+                walk(it, wid)
+
+    walk(data)
+    return out
+
+
+def extract_workspace_ids(raw: str | Any) -> list[dict[str, str]]:
+    """Return workspace_id entries (never confuse with team_id)."""
+    data = try_parse_json(raw) if isinstance(raw, str) else raw
+    out: list[dict[str, str]] = []
+    seen: set[str] = set()
+
+    def walk(node: Any) -> None:
+        if isinstance(node, list):
+            for x in node:
+                walk(x)
+            return
+        if not isinstance(node, dict):
+            return
+        wid = sfield(node, ["workspace_id", "workspaceId"])
+        if wid and wid not in seen:
+            # Don't pick up nested team-only nodes that only have team_id
+            seen.add(wid)
+            out.append({"workspace_id": wid, "name": sfield(node, ["name", "title"], wid)})
+        for key in ("workspaces", "items", "data", "results"):
+            if isinstance(node.get(key), list):
+                for c in node[key]:
+                    walk(c)
 
     walk(data)
     return out
@@ -249,7 +286,7 @@ def bundle_from_fixture(data: dict[str, Any]) -> MonthBundle:
                 client=sfield(p, ["client", "client_name", "clientName"], ""),
                 minutes=mins,
                 budget_hours=budget,
-                billable=bool(p.get("billable", True)),
+                billable=bool(p.get("billable")) if "billable" in p else False,
                 budget_used_pct=pct,
             )
         )
@@ -331,7 +368,7 @@ def _parse_projects(raw: str) -> list[ProjectRow]:
                 client=sfield(p, ["client", "client_name", "clientName", "account"], ""),
                 minutes=mins,
                 budget_hours=budget,
-                billable=bool(p.get("billable", True)),
+                billable=bool(p.get("billable")) if "billable" in p else False,
                 budget_used_pct=nfield(p, ["budget_used_pct", "budgetUsedPct", "percent_used"]),
             )
         )
@@ -344,7 +381,18 @@ def _parse_user_daily(raw: str) -> list[DayRow]:
     for d in as_array(data):
         if not isinstance(d, dict):
             continue
-        day = sfield(d, ["date", "day", "work_date", "summary_date"])[:10]
+        day = sfield(
+            d,
+            [
+                "date",
+                "day",
+                "work_date",
+                "summary_date",
+                "start_date",
+                "startDate",
+                "start",
+            ],
+        )[:10]
         if not day:
             continue
         out.append(
@@ -365,12 +413,35 @@ def _parse_activities(raw: str) -> list[ActivityRow]:
     for a in as_array(data):
         if not isinstance(a, dict):
             continue
+        day = sfield(
+            a,
+            [
+                "date",
+                "day",
+                "started_at",
+                "start",
+                "start_timestamp",
+                "start_time_absolute",
+                "startTimeAbsolute",
+            ],
+        )[:10]
         out.append(
             ActivityRow(
-                date=sfield(a, ["date", "day", "started_at", "start"])[:10],
+                date=day,
                 project_id=sfield(a, ["project_id", "projectId"]),
                 project_name=sfield(a, ["project_name", "projectName", "project"]),
-                title=sfield(a, ["title", "name", "summary", "description", "reason"], "Activity"),
+                title=sfield(
+                    a,
+                    [
+                        "objective",
+                        "title",
+                        "name",
+                        "summary",
+                        "description",
+                        "reason",
+                    ],
+                    "Activity",
+                ),
                 minutes=minutes_from(a),
                 app=sfield(a, ["app", "application", "source_app", "window_app"]),
             )
@@ -410,7 +481,7 @@ def _parse_project_daily(raw: str) -> list[dict[str, Any]]:
                 "project_name": sfield(row, ["project_name", "projectName", "name"]),
                 "client": sfield(row, ["client", "client_name"]),
                 "minutes": minutes_from(row),
-                "billable": bool(row.get("billable", True)),
+                "billable": bool(row.get("billable")) if "billable" in row else False,
             }
         )
     return out
@@ -448,7 +519,7 @@ def merge_mcp_entities(
                     client=str(row.get("client") or ""),
                     minutes=0,
                     budget_hours=None,
-                    billable=bool(row.get("billable", True)),
+                    billable=bool(row.get("billable")) if "billable" in row else False,
                 )
             roll[pid].minutes += int(row.get("minutes") or 0)
         projects = list(roll.values())

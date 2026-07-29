@@ -24,7 +24,8 @@ DEFAULT_MCP_URL = "https://app.timeglass.ai/api/mcp"
 TOOL = {
     "work_records": "query_work_records",
     "directory": "query_workspace_directory",
-    "set_team": "set_team",
+    "set_team": "set_team",  # legacy; product MCP now uses set_workspace
+    "set_workspace": "set_workspace",
     "screenshots": "get_minute_screenshots",
     "transcript": "get_meeting_transcript",
 }
@@ -215,8 +216,16 @@ class TimeglassMcpClient:
         return self.call_tool(TOOL["directory"], args)
 
     def set_team(self, team_id: str) -> str:
+        """Legacy helper — prefer set_workspace(workspace_id) on current product MCP."""
         # Prefer camelCase; some servers accept team_id
         try:
             return self.call_tool(TOOL["set_team"], {"teamId": team_id})
         except McpError:
             return self.call_tool(TOOL["set_team"], {"team_id": team_id})
+
+    def set_workspace(self, workspace_id: str) -> str:
+        """Activate workspace scope (current Timeglass product MCP tool)."""
+        try:
+            return self.call_tool(TOOL["set_workspace"], {"workspaceId": workspace_id})
+        except McpError:
+            return self.call_tool(TOOL["set_workspace"], {"workspace_id": workspace_id})

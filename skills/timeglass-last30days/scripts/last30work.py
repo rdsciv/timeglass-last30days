@@ -34,6 +34,7 @@ from lib.mcp_client import DEFAULT_MCP_URL, McpConfig, McpError, TimeglassMcpCli
 from lib.parse import (  # noqa: E402
     bundle_from_fixture,
     extract_team_ids,
+    extract_workspace_ids,
     merge_mcp_entities,
     try_parse_json,
     window_bounds,
@@ -68,19 +69,42 @@ def fetch_mcp_bundle(days: int, end: date | None, team_id: str | None) -> Any:
     except McpError as e:
         raise SystemExit(f"MCP initialize failed: {e}") from e
 
-    # Resolve team
+    # Resolve workspace + team (never confuse the two)
     resolved_team = team_id
-    if not resolved_team:
-        for entity in ("teams", "workspaces"):
-            try:
-                raw = client.query_directory(entity)
-                cands = extract_team_ids(raw)
-                if cands:
-                    resolved_team = cands[0]["team_id"]
-                    break
-            except McpError as e:
-                warnings.append(f"directory/{entity}: {e}")
-    if resolved_team:
+    resolved_workspace: str | None = None
+    dir_raw = ""
+    try:
+        dir_raw = client.query_directory("teams")
+    except McpError as e:
+        warnings.append(f"directory/teams: {e}")
+        try:
+            dir_raw = client.query_directory("workspaces")
+        except McpError as e2:
+            warnings.append(f"directory/workspaces: {e2}")
+
+    if dir_raw:
+        teams = extract_team_ids(dir_raw)
+        workspaces = extract_workspace_ids(dir_raw)
+        if not resolved_team and teams:
+            resolved_team = teams[0]["team_id"]
+            resolved_workspace = teams[0].get("workspace_id") or None
+        if not resolved_workspace and workspaces:
+            resolved_workspace = workspaces[0]["workspace_id"]
+        if not resolved_workspace and teams:
+            resolved_workspace = teams[0].get("workspace_id") or None
+
+    # Current product MCP uses set_workspace(workspaceId). Fall back to legacy set_team.
+    if resolved_workspace:
+        try:
+            client.set_workspace(resolved_workspace)
+        except McpError as e:
+            warnings.append(f"set_workspace({resolved_workspace}): {e}")
+            if resolved_team:
+                try:
+                    client.set_team(resolved_team)
+                except McpError as e2:
+                    warnings.append(f"set_team({resolved_team}): {e2}")
+    elif resolved_team:
         try:
             client.set_team(resolved_team)
         except McpError as e:
@@ -109,6 +133,9 @@ def fetch_mcp_bundle(days: int, end: date | None, team_id: str | None) -> Any:
     activities_raw = q("activities")
     meetings_raw = q("meetings")
     project_daily_raw = q("project_daily_summary")
+    # optional enrichments when available
+    clients_raw = q("clients")
+    activity_items_raw = q("activity_items")
 
     user = os.environ.get("TIMEGASS_USER_NAME", "")
     workspace = os.environ.get("TIMEGASS_WORKSPACE_NAME", "")
@@ -123,12 +150,21 @@ def fetch_mcp_bundle(days: int, end: date | None, team_id: str | None) -> Any:
     except McpError:
         pass
 
+    # Prefer richer activity_items titles when activities are sparse/generic
+    act_for_merge = activities_raw
+    if activity_items_raw and (
+        not activities_raw
+        or '"title":"Activity"' in activities_raw
+        or activities_raw.count('"') < 40
+    ):
+        act_for_merge = activity_items_raw
+
     return merge_mcp_entities(
         window_start=start_d.isoformat(),
         window_end=end_d.isoformat(),
         projects_raw=projects_raw,
         user_daily_raw=user_daily_raw,
-        activities_raw=activities_raw,
+        activities_raw=act_for_merge,
         meetings_raw=meetings_raw,
         project_daily_raw=project_daily_raw,
         user=user,

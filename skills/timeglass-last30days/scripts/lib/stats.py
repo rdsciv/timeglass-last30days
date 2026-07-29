@@ -80,8 +80,12 @@ def compute_stats(bundle: MonthBundle, version: str = "1.0.0") -> WrappedStats:
     billable = 0
     if bundle.days and any(d.billable_minutes for d in bundle.days):
         billable = sum(d.billable_minutes for d in bundle.days)
-    else:
+    elif any(p.billable for p in bundle.projects):
+        # Only count when MCP/fixture explicitly marked projects billable
         billable = sum(p.minutes for p in bundle.projects if p.billable)
+    # Never invent billable > total (project totals can diverge from daily)
+    if total and billable > total:
+        billable = total
 
     meeting_minutes = sum(m.minutes for m in bundle.meetings)
     if meeting_minutes == 0 and bundle.days:
@@ -92,7 +96,10 @@ def compute_stats(bundle: MonthBundle, version: str = "1.0.0") -> WrappedStats:
     meeting_pct = round(100.0 * meeting_minutes / total, 1) if total else 0.0
     avg = round((total / 60.0) / active_days, 2) if active_days else 0.0
 
-    # Projects
+    # Project share denominator: prefer project minutes sum when daily total diverges
+    project_minutes_sum = sum(p.minutes for p in bundle.projects if p.minutes > 0)
+    share_base = project_minutes_sum if project_minutes_sum > 0 else total
+
     top_projects = []
     for p in sorted(bundle.projects, key=lambda x: x.minutes, reverse=True):
         if p.minutes <= 0:
@@ -104,7 +111,7 @@ def compute_stats(bundle: MonthBundle, version: str = "1.0.0") -> WrappedStats:
                 "client": p.client,
                 "minutes": p.minutes,
                 "hours": round(p.minutes / 60.0, 1),
-                "share_pct": round(100.0 * p.minutes / total, 1) if total else 0.0,
+                "share_pct": round(100.0 * p.minutes / share_base, 1) if share_base else 0.0,
                 "billable": p.billable,
                 "budget_hours": p.budget_hours,
                 "budget_used_pct": p.budget_used_pct
